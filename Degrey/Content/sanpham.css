@@ -305,6 +305,9 @@
         font-weight: normal;
         cursor: pointer;
     }
+.cartdropcontent {
+    display: none;
+}
 
 
     

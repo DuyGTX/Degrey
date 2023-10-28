@@ -50,8 +50,8 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
                     </div>
+                </div>
             </div>
         </div>
         <div class="collection-filter">
@@ -71,11 +71,11 @@
                             <div class="row">
                                 <div class="filter-group col-md-3 col-sm-12  col-xs-12" style="font-weight: 500;line-height: 3;font-size: 14px;color: black;">
                                     <div class="sortbyfilter" style=" border: 0px;">
-                                        <div class="dropdown" id="productDropdown" style="margin-left: -34px; padding-left: 23px;">
-                                            
+                                        <div class="dropdown" id="cartDropdown" style="margin-left: -34px; padding-left: 23px;">
+
                                             <span style="margin-left: 10px;">Lọc giá</span>
                                             <span class="icon" style="left: 220px;"></span>
-                                            <div class="dropdown-content" style="width: 231px; margin-top: -3px; margin-left: -2px; ">
+                                            <div class="cartdropcontent dropdown-content" style="width: 231px; margin-top: -3px; margin-left: -2px; ">
                                                 <div class="check-list">
                                                     <label>
                                                         <input type="checkbox" class="price-filter" value="0-100000">
@@ -112,13 +112,13 @@
                                     <span class="icon"></span>
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
 
                     </div>
 
-                    
+
                 </div>
 
 
@@ -582,6 +582,30 @@
                 </div>
             </div>
             <a href="#" id="loadMore">Xem thêm sản phẩm</a>
+            
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+             aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Giỏ hàng</h5>
+                        <button type="button" class="btniconclose close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="show-cart table">
+                        </table>
+                        <div class="grand-total">Tổng tiền: ₹<span class="total-cart"></span></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btnclose btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-danger clear-all">Clear All</button> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -654,6 +678,46 @@
             // Thêm sản phẩm đã sắp xếp lại vào danh sách
             products.forEach(product => productList.appendChild(product));
         }      
+    });
+
+    $(function () {
+        $('#btnCart').click(function () {
+            $('#staticBackdrop').modal('show'); // hiện modal
+        });
+        $('.btnclose').click(function () {
+            $('#staticBackdrop').modal('hide');
+        });
+        $('.btniconclose').click(function () {
+            $('#staticBackdrop').modal('hide');
+        });
+    });
+    $(document).ready(function () {
+        // Bắt sự kiện hover vào phần tử có ID "productDropdown"
+        $("#productDropdown").hover(
+            function () {
+                // Khi con trỏ chuột nằm trên phần tử "productDropdown"
+                // Hiển thị dropdown content
+                $(".dropdown-content").show();
+            },
+            function () {
+                // Khi con trỏ chuột ra khỏi phần tử "productDropdown"
+                // Ẩn dropdown content
+                $(".dropdown-content").hide();
+            }
+        );
+
+        $("#cartDropdown").hover(
+            function () {
+                // Khi con trỏ chuột nằm trên phần tử "productDropdown"
+                // Hiển thị dropdown content
+                $(".cartdropcontent").show();
+            },
+            function () {
+                // Khi con trỏ chuột ra khỏi phần tử "productDropdown"
+                // Ẩn dropdown content
+                $(".cartdropcontent").hide();
+            }
+        );
     });
 </script>
 

@@ -6,58 +6,57 @@
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/header-footer.css" rel="stylesheet" />
-    <link href="~/Content/content.css" rel="stylesheet" />
+    @*<link href="~/Content/content.css" rel="stylesheet" />*@
     <link href="~/Content/Font/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <header class="main" style="height: 90px">
-        
-            <div class="main-header" style="height:90px">
-                <div class="container" style="max-width: 1140px; height: 90px">
-                    <div class="flex-container-header">
-                        <div class="header-wrap-logo">
-                            <div class="wrap-logo">
-                                <a href="Home">
-                                    <img style="height:auto" src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="Day la anh" class="logo" />
-                                </a>
 
-                                <div class="search">
-                                    <i class="fa-solid fa-magnifying-glass" style="color: #c7c7c7; margin: 0 10px"></i>
-                                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." class="search-item" />
-                                </div>
-                                <div class="hidden-search">
-                                    @*<div class="container">
-                                        <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." class="search-item" />
-                                    </div>*@
-                                    
-                                </div>
+        <div class="main-header" style="height:90px">
+            <div class="container" style="max-width: 1140px; height: 90px">
+                <div class="flex-container-header">
+                    <div class="header-wrap-logo">
+                        <div class="wrap-logo">
+                            <a href="Home">
+                                <img style="height:auto" src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="Day la anh" class="logo" />
+                            </a>
 
-                                <a href="Cart" class="cart">
-                                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
-                                    <div class="cart-content">
-                                        Giỏ hàng
-                                    </div>
-                                    <div class="count">0</div>
-                                </a>
+                            <div class="search">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #c7c7c7; margin: 0 10px"></i>
+                                <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." class="search-item" />
                             </div>
-                        </div>
-                        <div class="header-wrap-main">
-                            <ul class="header-list">
-                                <li class="list-item"><a href="Home">Trang chủ</a></li>
-                                <li class="list-item"><a href="SanPham">Sản phẩm</a></li>
-                                <li class="list-item"><a href="Store">Store</a></li>
-                                <li class="list-item"><a href="GioiThieu">Giới thiệu</a></li>
-                            </ul>
-                        </div>
+                            <div class="hidden-search">
+                                @*<div class="container">
+                <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." class="search-item" />
+            </div>*@
+
+                            </div>
+
+                            <a class="cart" id="btnCart">
+                                <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                                <div class="cart-content">
+                                    Giỏ hàng
+                                </div>
+                                <div class="count">0</div>
+                            </a>                           
                         </div>
                     </div>
+                    <div class="header-wrap-main">
+                        <ul class="header-list">
+                            <li class="list-item"><a href="Home">Trang chủ</a></li>
+                            <li class="list-item"><a href="SanPham">Sản phẩm</a></li>
+                            <li class="list-item"><a href="Store">Store</a></li>
+                            <li class="list-item"><a href="GioiThieu">Giới thiệu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        
+
 
 
 
@@ -204,13 +203,13 @@
         </div>
     </footer>
     <div class="footer-copyright" style="max-height:45.6px">
-        <div class="container" >
+        <div class="container">
             <p>
                 Copyright © 2023 <a href="#" style="color: white;text-decoration: none;"> DEGREY VIETNAM</a>
                 <a>Powered by Haravan</a>
             </p>
         </div>
-        
+
 
 
     </div>
