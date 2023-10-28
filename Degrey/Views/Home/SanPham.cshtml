@@ -1,0 +1,662 @@
+﻿
+@{
+    ViewBag.Title = "SanPham";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    <link href="~/Content/sanpham.css" rel="stylesheet" />
+}
+<div class="main-content-product">
+    <div class="breadcrumb-all">
+        <div class="container" style="height:100%">
+            <div class="wrap-breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="Home">Trang chủ</a></li>
+                    <li style="color: #777777;">Tất cả sản phẩm</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container">
+            <img class="img-banner" src="https://file.hstatic.net/1000281824/file/cover_1_87a6ac90b1c94059a093003239175873.jpg" alt="Banner" />
+
+        </div>
+
+    </div>
+    <div class="main-collection">
+        <div class="collection-heading">
+            <div class="container" style="height:68px;">
+                <div class="wrap-heading">
+                    <div class="row">
+                        <div class=" col-md-9  col-sm-12 col-xs-12" style=" height: 100%;">
+                            <h1 class="title">Tất cả sản phẩm</h1>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="sortbyfilter">
+                                <div class="dropdown" id="productDropdown">
+                                    <i class="fa fa-sort-alpha-asc icon-az"></i>
+                                    <span style="font-weight: 600;"> Sắp xếp</span>
+                                    <span class="triangle"></span>
+                                    <div class="dropdown-content">
+                                        <a>Sản phẩm nổi bật</a>
+                                        <a>Giá: Tăng dần</a>
+                                        <a>Giá: Giảm dần</a>
+                                        <a>Tên: A-Z</a>
+                                        <a>Tên: Z-A</a>
+                                        <a>Cũ nhất</a>
+                                        <a>Mới nhất</a>
+                                        <a>Bán chạy nhất</a>
+                                        <a>Tồn kho giảm dần</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="collection-filter">
+            <div class="container" style="height:55.45px">
+                <div class="wrap-filter">
+                    <div class="filter-container">
+                        <div class="title-filter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                                <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+                            </svg>
+
+                            <span style="font-weight: 600;">
+                                BỘ LỌC
+                            </span>
+                        </div>
+                        <div class="filter-all">
+                            <div class="row">
+                                <div class="filter-group col-md-3 col-sm-12  col-xs-12" style="font-weight: 500;line-height: 3;font-size: 14px;color: black;">
+                                    <div class="sortbyfilter" style=" border: 0px;">
+                                        <div class="dropdown" id="productDropdown" style="margin-left: -34px; padding-left: 23px;">
+                                            
+                                            <span style="margin-left: 10px;">Lọc giá</span>
+                                            <span class="icon" style="left: 220px;"></span>
+                                            <div class="dropdown-content" style="width: 231px; margin-top: -3px; margin-left: -2px; ">
+                                                <div class="check-list">
+                                                    <label>
+                                                        <input type="checkbox" class="price-filter" value="0-100000">
+                                                        Dưới 100.000₫
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" class="price-filter" value="100000-250000">
+                                                        100.000₫ - 250.000₫
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" class="price-filter" value="250000-500000">
+                                                        250.000₫ - 500.000₫
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" class="price-filter" value="500000-800000">
+                                                        500.000₫ - 800.000₫
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" class="price-filter" value="800000">
+                                                        Trên 800.000₫
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-group col-md-3 col-sm-12  col-xs-12" style="font-weight: 500;line-height: 3;font-size: 14px;color: black;">
+                                    <span style="margin-left: 10px;">Màu sắc</span>
+                                    <span class="icon"></span>
+                                </div>
+                                <div class="filter-group col-md-3 col-sm-12  col-xs-12" style="font-weight: 500;line-height: 3;font-size: 14px;color: black;">
+                                    <span style="margin-left: 10px;">Kích thước</span>
+                                    <span class="icon"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+                    </div>
+
+                    
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="collection-product">
+            <div class="list-product" id="productList">
+                <!-- Ô 1 -->
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/6e90f6d4329a43058f96e4b667c739d0_566f1d703b6744898863c749460b0f04_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Balo Simili Nap Basic - SNAP </a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">440,000₫</span>
+                                <span class="amount-del">490,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ô 2 -->
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/img_6753_7cb6011bd47f487592e367ea7f73ccfe_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Leather Basic Balo Small Size - LBBM </a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">340,000₫</span>
+                                <span class="amount-del">390,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/img_6752_600de1673b2e40a2b4b0aa3b1f0524d7_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Double Leather Basic Balo Small Size - LBBDM</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">340,000₫</span>
+                                <span class="amount-del">430,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/7425f1f5ff7442b7976423d5d22d2c15_94aa0752b5d84f3ab2910f3cbed9b9eb_large.jpg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Medium Leather Basic Balo Kem - MLBBK</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">300,000₫</span>
+                                <span class="amount-del">380,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/nt5177_xq6wzrw4-1-7uzu-hinh_nghieng_trai-0_0557ba6ab9d54e909c18a2bc566a5f22_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Medium Leather Basic Balo - MLBB</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">300,000₫</span>
+                                <span class="amount-del">380,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/c39b1fb4b6754c47962405b8fee6fa0c_49eab7d9ab424059ac2ea87b564fd4e8_large.jpg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Leather Basic Balo - LBB  _</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">430,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/lbb_van_da_ed8f0043b76d4cc79437e67b1425d904_large.png" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Crocodile Leather Basic Balo - CLBB</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">430,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/af8c07970fee4fca9047aab2081fe886_549ebdea53644aab9411b84a989840df_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Leather Basic Balo Kem - LBBK</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">430,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/2d866695-b448-4f5c-b52b-3401db3098dd_76b9baaa3f14443f82f5b9a69f641062_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Leather Basic Balo Rêu - LBBR</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">430,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/8cd6af57-269e-4118-aca6-c79cf29f02b0_29a96c84c0dd48c4a3030b4b0501848c_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Leather Basic Balo Xám - LBBX</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">430,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/7cbf5801-3f66-492c-8d91-873beb45b013_5a2650170c724d6ba2071164754afa55_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Double Leather Basic Balo - LBBD</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">480,000₫</span>
+                                <span class="amount-del">500,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/21c28a0d2188493f814eab78b5049666_5c52ceee0fde423893c06557a224784c_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Double Leather Basic Balo Xám - LBBDX</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">480,000₫</span>
+                                <span class="amount-del">500,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/nt5177_k80zbanv-1-p99b-hinh_nghieng_trai-0_31cddc7b84af47d691e1d8982da1c9f0_large.jpeg" Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Double Leather Basic Balo Kem - LBBDK</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">480,000₫</span>
+                                <span class="amount-del">500,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/5a4a4fb53d084816ba7680c6de385414_021c797e83ba4ea09e24a9032df38ce3_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Áo Thun Degrey Dây Rút Kem - ATRK</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">245,000₫</span>
+                                <span class="amount-del">350,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/fb7c8d8caf70430abaa29cbd0c93788f_57983a2fc69840dd8e355ca9ed79c4c1_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Áo Thun Degrey Dây Rút Đen - ATRD</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">245,000₫</span>
+                                <span class="amount-del">350,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/5d0c60ca18ea49e19d59ed8aa9f6ec40_058f4245f686413f9f962816c349968c_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Tee Degrey IsUs Đen - USDE</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">245,000₫</span>
+                                <span class="amount-del">350,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/nta101_odetzrd3-1-q8bg-hinh_mat_sau-0_a3cd07482e6c4afbbf2325c405424f78_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Tee Degrey IsUs Kem - USK</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">245,000₫</span>
+                                <span class="amount-del">350,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/nt5177_kq37cpuw-1-athf-hinh_nghieng_trai-0_5108ce4b5dee4c0ea0c24065d1f15149_large.jpg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Balo Leather Quốc Dân - BQDL</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">340,000₫</span>
+                                <span class="amount-del">380,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/img_5693_cfbb0828cc894ec7b7b7b9c31414f6a6_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Leather ToteBook Xám - DLTX</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">350,000₫</span>
+                                <span class="amount-del">450,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/img_5822_d69bcabf6e5946eaa58567a9c2fd1270_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Leather ToteBook Kem - DLTK</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">350,000₫</span>
+                                <span class="amount-del">450,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/tui_mini_bac_64ce55d36b29471ab81ad4d1640eb448_large.png" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Túi đeo chéo vân cá sấu Degrey Crocodile Simili Bag</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">240,000₫</span>
+                                <span class="amount-del">350,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/tui_mini_den_2f6aca10364e4754a4dc8a2f57f43b72_large.png" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Túi đeo chéo Degrey Black Coffee Simili Bag màu đen</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">240,000₫</span>
+                                <span class="amount-del">350,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/nt5138_x4f7f5bh-1-htxy-hinh_nghieng_trai_sau_linh_dong-0_2ae55991b4094071a928780dcd62561a_large.jpg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Túi đeo chéo Degrey Coffee Simili Bag màu kem</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">240,000₫</span>
+                                <span class="amount-del">350,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/19ad91d067004101b71871aa91bcaf19_53e92d4d8cbd47d49a8b1086e8a844a8_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey.Madmonks Tee Vietnam 84 Green - DV84G</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">290,000₫</span>
+                                <span class="amount-del">440,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/c36102eb2ef140f19de7e1c28af42689_b931524454ef47029074e2e202a54fb9_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey.Madmonks Tee Vietnam 84 Xám - DV84XA</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">290,000₫</span>
+                                <span class="amount-del">440,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/nta107_2savwjzb-1-5s9i-hinh_mat_truoc-0_efeb3a8b0d8347fc951d560bf225370d_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey.Madmonks Basic Long Pant - DMPA</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">450,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/b15101a0-df42-4fe6-8883-ea14e060b648_18b3b72e53fc4ce7931c8d18f07b1382_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey.madmonks short pant đen- DMQS</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">190,000₫</span>
+                                <span class="amount-del">380,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/69d9039d-18b4-4840-8386-7b987e9965d3_0b500ef4438a40ed8d6cbc0b996ba3c9_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey.madmonks short Pant trắng - DMQT</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">190,000₫</span>
+                                <span class="amount-del">380,000₫</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/ayya0478_e24d7ad4eed8457aac722da8e43cb0b2_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey Quần Lửng Túi Hộp Ống Rộng - QLTH</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">390,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="https://product.hstatic.net/1000281824/product/nta107_5pgv0knf-1-j6r7-hinh_mat_sau-0_0ae679d4cbec45e7ad12b1cc979b0782_large.jpeg" alt="Hình ảnh 1">
+                        </a>
+                        <div class="detail">
+                            <a href="#">Degrey 2 layer culottes pants - DLCP</a>
+                            <p class="price" style="margin-bottom: 8px;">
+                                <span class="amount">400,000₫</span>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="loadMore">Xem thêm sản phẩm</a>
+        </div>
+    </div>
+</div>
+<script>
+    const productDropdown = document.getElementById("productDropdown");
+    const productList = document.getElementById("productList");
+    const sortSelect = productDropdown.querySelector(".dropdown-content");
+
+    // Lắng nghe sự kiện khi người dùng chọn tùy chọn từ dropdown
+    sortSelect.addEventListener("click", function (event) {
+        if (event.target.tagName === "A") {
+            const sortBy = event.target.textContent;
+            const products = Array.from(productList.children);
+
+            // Xác định cách sắp xếp dựa trên tùy chọn của người dùng
+            if (sortBy === "Giá: Tăng dần")
+            {
+                products.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
+                    const priceB = parseFloat(b.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
+                    return priceA - priceB;
+                });
+            } else if (sortBy === "Giá: Giảm dần") 
+            {
+                products.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
+                    const priceB = parseFloat(b.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
+                    return priceB - priceA;
+                });
+            }
+            if (sortBy === "Tên: A-Z") {
+                products.sort((a, b) => {
+                    const nameA = a.querySelector(".detail a").textContent.toUpperCase();
+                    const nameB = b.querySelector(".detail a").textContent.toUpperCase();
+                    return nameA.localeCompare(nameB);
+                });
+            } else if (sortBy === "Tên: Z-A") {
+                products.sort((a, b) => {
+                    const nameA = a.querySelector(".detail a").textContent.toUpperCase();
+                    const nameB = b.querySelector(".detail a").textContent.toUpperCase();
+                    return nameB.localeCompare(nameA);
+                });
+
+            }
+            if (sortBy === "Sản phẩm nổi bật") {
+                products.sort((a, b) => {
+                    const nameA = a.querySelector(".detail a").textContent.toUpperCase();
+                    const nameB = b.querySelector(".detail a").textContent.toUpperCase();
+
+                    const isBaloA = nameA.includes("BALO");
+                    const isBaloB = nameB.includes("BALO");
+
+                    if (isBaloA && !isBaloB) {
+                        return -1;
+                    } else if (!isBaloA && isBaloB) {
+                        return 1;
+                    }
+
+                    return nameA.localeCompare(nameB);
+                });
+            }
+
+
+
+            // Xóa toàn bộ sản phẩm khỏi danh sách
+            while (productList.firstChild) {
+                productList.removeChild(productList.firstChild);
+            }
+
+            // Thêm sản phẩm đã sắp xếp lại vào danh sách
+            products.forEach(product => productList.appendChild(product));
+        }      
+    });
+</script>
+
+
+
+

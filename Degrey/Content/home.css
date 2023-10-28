@@ -1,0 +1,40 @@
+﻿.main-content {
+    /* width:auto;*/
+    height: 100%;
+    
+}
+.picture {
+    text-align: center;
+   
+}
+.picture-1 {
+    
+    WIDTH: 1140px;
+    HEIGHT: 641px;
+}
+.picture-2 {
+    
+    WIDTH: 1140px;
+    HEIGHT: 762px;
+}
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-item {
+    text-align: center;
+    min-height: 80vh;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    align-self: center; 
+}
+
+
+
+   
+
