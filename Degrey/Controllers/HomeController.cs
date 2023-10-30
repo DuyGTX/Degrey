@@ -81,8 +81,10 @@ namespace Degrey.Controllers
             {
                 ViewBag.ProductID = product.ID;
                 ViewBag.ProductName = product.ProductName;
-                ViewBag.Price = product.Price;
-                ViewBag.PriceRetail= product.PriceRetail;
+                ViewBag.Price = Convert.ToInt32(product.Price);
+                ViewBag.Discount = product.Discount*100;
+                ViewBag.PriceRetail= Convert.ToInt32(product.PriceRetail);
+                ViewBag.ImageName = product.ImageName;
                 // Các thông tin sản phẩm khác
             }
 

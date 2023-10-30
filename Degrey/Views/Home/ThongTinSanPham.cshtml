@@ -25,7 +25,9 @@ Sản phẩm có ID là: @ViewBag.ProductID
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 productDetail--gallery">
-
+                <div class="image-product" style="width:100px;height:100px">
+                    <img src="/Image/@ViewBag.ImageName">
+                </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 productDetail--content" id="detail-product">
                 <div class="product-container-detail">
@@ -76,11 +78,11 @@ Sản phẩm có ID là: @ViewBag.ProductID
                         </div>
                         <div class="product-price">
 
-                            <del>@ViewBag.Price ₫</del>
+                            <del>@String.Format("{0:N0}", ViewBag.Price) ₫</del>
 
-                            <span class="pro-price">@ViewBag.Price ₫</span>
+                            <span class="pro-price">@String.Format("{0:N0}", ViewBag.PriceRetail) ₫</span>
 
-                            <span class="pro-percent">13% giảm</span>
+                            <span class="pro-percent">@ViewBag.Discount % giảm</span>
                         </div>
                     </div>
                     <div class="product-available">
