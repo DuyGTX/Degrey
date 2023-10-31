@@ -243,26 +243,82 @@
 
 </html>
 <script>
+    function GetDataSession(isDelete) {        
+        // Đọc dữ liệu từ SessionStorage
+        var tableDataJson = sessionStorage.getItem("tableData");
+        // Kiểm tra xem dữ liệu đã tồn tại
+        if (tableDataJson) {
+            var total = 0;
+            var count = 0;
+            var tableData = JSON.parse(tableDataJson);
+            tableData.forEach(function (rowData) {
+                var Quantity = parseInt(rowData.quantity);
+                var Price = parseInt(rowData.price);
+                var productTotal = Quantity * Price;
+                total += productTotal;
+                count++;
+
+                $.ajax({
+                    url: "/Home/GetImageName",
+                    type: "POST",
+                    data: { ProductName: rowData.productName },
+                    headers: {
+                        RequestVerificationToken:
+                            $('input:hidden[name="__RequestVerificationToken"]').val()
+                    }
+                }).done(function (data) {
+                    var rowHtml = '<tr><td><img style="width:100px;height:100px" src="/Image/' + data + '"/></td>' +
+                        '<td>' + rowData.productName + '</td>' +
+                        '<td>' + rowData.quantity + '</td>' +
+                        '<td>' + rowData.price + '</td>' +
+                        '<td><button class="btn btn-sm btn-danger" style="text-align:center" onclick="deleteRow(this)"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr >';
+                    $('.show-cart').append(rowHtml);
+
+                });
+                
+            });
+            $('#count_detailorder').text(count);
+            // Hiển thị tổng tiền
+            $('.total-cart').text(total);
+
+        }
+    }
+
+    function deleteRow(btn) {
+        var row = btn.parentNode.parentNode;
+        row.parentNode.removeChild(row);        
+        var total = 0;
+        var count = 0;
+        var tableData = [];
+        // Lặp qua từng hàng trong bảng
+        $('#cart-table tbody tr').each(function () {            
+            var Quantity = parseInt($(this).find('td').eq(2).text());
+            var Price = parseInt($(this).find('td').eq(3).text());
+            var productTotal = Quantity * Price;
+            total += productTotal;
+            count++;
+
+            var rowData = {
+                productImage: $(this).find('td').eq(0).text(),
+                productName: $(this).find('td').eq(1).text(),
+                quantity: parseInt($(this).find('td').eq(2).text()),
+                price: parseFloat($(this).find('td').eq(3).text()),
+            };
+            tableData.push(rowData);
+        });
+        $('#count_detailorder').text(count);
+        // Hiển thị tổng tiền
+        $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
+
+        // Chuyển dữ liệu thành chuỗi JSON
+        var tableDataJson = JSON.stringify(tableData);
+        // Lưu chuỗi JSON vào SessionStorage
+        sessionStorage.removeItem("tableData");
+        sessionStorage.setItem("tableData", tableDataJson);
+    }
     $(function () {
-        $('#btnCart').click(function () {
-            //debugger
-            //// Đọc dữ liệu từ SessionStorage
-            //var tableDataJson = sessionStorage.getItem("tableData");
-
-            //// Kiểm tra xem dữ liệu đã tồn tại
-            //if (tableDataJson) {
-            //    var tableData = JSON.parse(tableDataJson);
-
-            //    // Hiển thị dữ liệu lên DataTable
-            //    var table = document.querySelector("#data-table tbody");
-            //    table.innerHTML = "";
-
-            //    tableData.forEach(function (rowData) {
-            //        var row = document.createElement("tr");
-            //        row.innerHTML = "<td>" + rowData.productName + "</td><td>" + rowData.price + "</td><td>" + rowData.quantity + "</td>";
-            //        table.appendChild(row);
-            //    });
-            //}
+        GetDataSession(true);
+        $('#btnCart').click(function () {            
             $('#staticBackdrop').modal('show'); // hiện modal
         });
         $('.btnclose').click(function () {
