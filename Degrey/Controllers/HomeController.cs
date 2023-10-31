@@ -1,4 +1,5 @@
 ﻿using Degrey.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,13 +83,18 @@ namespace Degrey.Controllers
                 ViewBag.ProductID = product.ID;
                 ViewBag.ProductName = product.ProductName;
                 ViewBag.Price = Convert.ToInt32(product.Price);
-                ViewBag.Discount = product.Discount*100;
-                ViewBag.PriceRetail= Convert.ToInt32(product.PriceRetail);
+                ViewBag.Discount = product.Discount * 100;
+                ViewBag.PriceRetail = Convert.ToInt32(product.PriceRetail);
                 ViewBag.ImageName = product.ImageName;
                 // Các thông tin sản phẩm khác
-            }
-
+            }  
             return View();
+        }
+
+        public ActionResult GetImageName(string ProductName)
+        {
+            var product = db.ListProducts.FirstOrDefault(p => p.ProductName == ProductName);
+            return Content(JsonConvert.SerializeObject(product.ImageName), "application/json");
         }
 
     }

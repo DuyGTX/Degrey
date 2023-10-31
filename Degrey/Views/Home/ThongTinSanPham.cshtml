@@ -194,29 +194,28 @@ Với các kênh chat, email &amp; phone">
         }
     }
 
-    function deleteRow(btn) {
-        var row = btn.parentNode.parentNode;
-        row.parentNode.removeChild(row);
-        var total = 0;
-        var count = 0;
-        // Lặp qua từng hàng trong bảng
-        $('#cart-table tbody tr').each(function () {
-            debugger
-            var Quantity = parseInt($(this).find('td').eq(2).text());
-            console.log($(this).find('td').eq(2).text());
-            var Price = parseInt($(this).find('td').eq(3).text());
-            var productTotal = Quantity * Price;
-            total += productTotal;
-            count++;
-        });
-        $('#count_detailorder').text(count);
-        // Hiển thị tổng tiền
-        $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
-    }
+    //function deleteRow(btn) {
+    //    var row = btn.parentNode.parentNode;
+    //    row.parentNode.removeChild(row);
+    //    var total = 0;
+    //    var count = 0;
+    //    // Lặp qua từng hàng trong bảng
+    //    $('#cart-table tbody tr').each(function () {
+    //        debugger
+    //        var Quantity = parseInt($(this).find('td').eq(2).text());
+    //        console.log($(this).find('td').eq(2).text());
+    //        var Price = parseInt($(this).find('td').eq(3).text());
+    //        var productTotal = Quantity * Price;
+    //        total += productTotal;
+    //        count++;
+    //    });
+    //    $('#count_detailorder').text(count);
+    //    // Hiển thị tổng tiền
+    //    $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
+    //}
 
     $(function () {
-        $('#add-to-cart').on('click', function () {
-            debugger
+        $('#add-to-cart').on('click', function () {            
             // Lấy thông tin sản phẩm từ ViewBag
             var productImage = '@ViewBag.ImageName';
             var productName = '@ViewBag.ProductName'; // Lấy tên sản phẩm từ ViewBag
@@ -257,11 +256,9 @@ Với các kênh chat, email &amp; phone">
             $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
 
             // Mở modal
-            $('#staticBackdrop').modal('show');
-            debugger
+            $('#staticBackdrop').modal('show');            
             // Chuyển dữ liệu thành chuỗi JSON
             var tableDataJson = JSON.stringify(tableData);
-
             // Lưu chuỗi JSON vào SessionStorage
             sessionStorage.setItem("tableData", tableDataJson);
         });              
