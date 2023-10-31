@@ -208,6 +208,7 @@ Với các kênh chat, email &amp; phone">
         var row = btn.parentNode.parentNode;
         row.parentNode.removeChild(row);
         var total = 0;
+        var count = 0;
         // Lặp qua từng hàng trong bảng
         $('#cart-table tbody tr').each(function () {
             debugger
@@ -216,8 +217,9 @@ Với các kênh chat, email &amp; phone">
             var Price = parseInt($(this).find('td').eq(3).text());
             var productTotal = Quantity * Price;
             total += productTotal;
+            count++;
         });
-
+        $('#count_detailorder').text(count);
         // Hiển thị tổng tiền
         $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
     }
@@ -240,6 +242,7 @@ Với các kênh chat, email &amp; phone">
                 '<td><button class="btn btn-sm btn-danger" style="text-align:center" onclick="deleteRow(this)"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr >';
             $('.show-cart').append(rowHtml);
             var total = 0;
+            var count = 0;
             // Lặp qua từng hàng trong bảng
             $('#cart-table tbody tr').each(function () {                
                 debugger                
@@ -248,7 +251,10 @@ Với các kênh chat, email &amp; phone">
                 var Price = parseInt($(this).find('td').eq(3).text());                
                 var productTotal = Quantity * Price;
                 total += productTotal;
+                count++;
             });
+
+            $('#count_detailorder').text(count);
             // Hiển thị tổng tiền
             $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
 

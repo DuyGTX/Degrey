@@ -75,18 +75,25 @@ namespace Degrey.Controllers
         public ActionResult Thongtinsanpham(int id)
         {
             // Sử dụng đối tượng db để truy cập cơ sở dữ liệu
-            var product = db.ListProducts.FirstOrDefault(p => p.ID == id);
+            //var product = db.ListProducts.FirstOrDefault(p => p.ID == id);
 
-            if (product != null)
-            {
-                ViewBag.ProductID = product.ID;
-                ViewBag.ProductName = product.ProductName;
-                ViewBag.Price = Convert.ToInt32(product.Price);
-                ViewBag.Discount = product.Discount*100;
-                ViewBag.PriceRetail= Convert.ToInt32(product.PriceRetail);
-                ViewBag.ImageName = product.ImageName;
-                // Các thông tin sản phẩm khác
-            }
+            //if (product != null)
+            //{
+            //    ViewBag.ProductID = product.ID;
+            //    ViewBag.ProductName = product.ProductName;
+            //    ViewBag.Price = Convert.ToInt32(product.Price);
+            //    ViewBag.Discount = product.Discount*100;
+            //    ViewBag.PriceRetail= Convert.ToInt32(product.PriceRetail);
+            //    ViewBag.ImageName = product.ImageName;
+            //    // Các thông tin sản phẩm khác
+            //}
+
+            ViewBag.ProductID = 1;
+            ViewBag.ProductName = "Degrey Balo Simili Nap Basic - SNAP";
+            ViewBag.Price = 499000;
+            ViewBag.Discount = 0.1 * 100;
+            ViewBag.PriceRetail = 449000;
+            ViewBag.ImageName = "DegreyBaloSimiliNapBasic.jpg";
 
             return View();
         }
