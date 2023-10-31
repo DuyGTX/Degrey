@@ -8,8 +8,8 @@
 
 
 @*<h2>ThongTinSanPham</h2>
-Sản phẩm có ID là: @ViewBag.ProductID
-@ViewBag.ProductName*@
+    Sản phẩm có ID là: @ViewBag.ProductID
+    @ViewBag.ProductName*@
 <div class="breadcrumb-all">
     <div class="container" style="height:100%">
         <div class="wrap-breadcrumb">
@@ -46,16 +46,17 @@ Sản phẩm có ID là: @ViewBag.ProductID
                                 </div>
                                 <div class="select-actions hidden-xs hidden-sm clearfix">
                                     <div class="quantity-area clearfix">
-                                        <input type="button" value="-" onclick="HRT.All.minusQuantity()" class="qty-btn">
-                                        <input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
-                                        <input type="button" value="+" onclick="HRT.All.plusQuantity()" class="qty-btn">
+                                        <input type="button" value="-" onclick="minusQuantity()" class="qty-btn">
+                                        <input type="text" id="quantity" name="quantity" value="1" min="1" style="width:60px" class="quantity-input">
+                                        <input type="button" value="+" onclick="plusQuantity()" class="qty-btn">
+                                        <button type="button" id="add-to-cart" class=" add-to-cartProduct button btn-dark btn-addtocart addtocart-modal " name="add">
+                                            Thêm vào giỏ
+                                        </button>
                                     </div>
 
                                     <div class="addcart-area">
-                                        <button type="button" id="add-to-cart" class=" add-to-cartProduct button dark btn-addtocart addtocart-modal " name="add">
-                                            Thêm vào giỏ
-                                        </button>
-                                        <button type="button" id="buy-now" disabled="" class="disabled add-to-cartProduct button dark btn-addtocart addtocart-modal hidden " name="add">
+                                        
+                                        <button type="button" id="buy-now" hidden class="disabled add-to-cartProduct button dark btn-addtocart addtocart-modal hidden " name="add">
                                             Mua ngay
                                         </button>
                                     </div>
@@ -67,14 +68,14 @@ Sản phẩm có ID là: @ViewBag.ProductID
                             <h1>@ViewBag.ProductName</h1>
                             @*<ul class="product-meta hidden-lg hidden-md hidden-sm hidden-xs">
 
-                                <li class="pro-sku">Mã sản phẩm: <span>BCN</span></li>
+                                    <li class="pro-sku">Mã sản phẩm: <span>BCN</span></li>
 
-                                <li class="pro-vendor">
-                                    Thương hiệu:
-                                    <a href="/collections/vendors?q=degrey">DEGREY</a>
-                                </li>
+                                    <li class="pro-vendor">
+                                        Thương hiệu:
+                                        <a href="/collections/vendors?q=degrey">DEGREY</a>
+                                    </li>
 
-                            </ul>*@
+                                </ul>*@
                         </div>
                         <div class="product-price">
 
@@ -186,7 +187,74 @@ Với các kênh chat, email &amp; phone">
             </div>
 
 
-        </div>  
+        </div>
     </div>
 </section>
+<script>
+    function plusQuantity() {
+        var quantity = $('#quantity').val();
+        quantity++;
+        $('#quantity').val(quantity);
+    }
+    function minusQuantity() {
+        var quantity = $('#quantity').val();
+        if (quantity > 1) {
+            quantity--;
+            $('#quantity').val(quantity);
+        }
+    }
+
+    function deleteRow(btn) {
+        var row = btn.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+        var total = 0;
+        // Lặp qua từng hàng trong bảng
+        $('#cart-table tbody tr').each(function () {
+            debugger
+            var Quantity = parseInt($(this).find('td').eq(2).text());
+            console.log($(this).find('td').eq(2).text());
+            var Price = parseInt($(this).find('td').eq(3).text());
+            var productTotal = Quantity * Price;
+            total += productTotal;
+        });
+
+        // Hiển thị tổng tiền
+        $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
+    }
+
+    $(function () {
+        $('#add-to-cart').on('click', function () {
+            debugger
+            // Lấy thông tin sản phẩm từ ViewBag
+            var productImage = '@ViewBag.ImageName';
+            var productName = '@ViewBag.ProductName'; // Lấy tên sản phẩm từ ViewBag
+            var productQuantity = $('#quantity').val();
+            var productPriceRetail = '@ViewBag.PriceRetail'; 
+
+
+            // Hiển thị thông số trong modal
+            var rowHtml = '<tr><td><img style="width:100px;height:100px" src="/Image/' + productImage + '"/></td>' +
+                '<td>' + productName + '</td>' +
+                '<td>' + productQuantity + '</td>' +
+                '<td>' + productPriceRetail + '</td>' +
+                '<td><button class="btn btn-sm btn-danger" style="text-align:center" onclick="deleteRow(this)"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr >';
+            $('.show-cart').append(rowHtml);
+            var total = 0;
+            // Lặp qua từng hàng trong bảng
+            $('#cart-table tbody tr').each(function () {                
+                debugger                
+                var Quantity = parseInt($(this).find('td').eq(2).text()); 
+                console.log($(this).find('td').eq(2).text());
+                var Price = parseInt($(this).find('td').eq(3).text());                
+                var productTotal = Quantity * Price;
+                total += productTotal;
+            });
+            // Hiển thị tổng tiền
+            $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
+
+            // Mở modal
+            $('#staticBackdrop').modal('show');
+        });              
+    });
+</script>
 

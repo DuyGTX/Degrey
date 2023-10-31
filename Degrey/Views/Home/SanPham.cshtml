@@ -114,17 +114,9 @@
                             </div>
 
                         </div>
-
-
                     </div>
-
-
                 </div>
-
-
-
             </div>
-
         </div>
         <div class="collection-product">
             <div class="list-product" id="productList">
@@ -133,7 +125,7 @@
                     <div class="image-container">
                         <a href="@Url.Action("Thongtinsanpham", "Home", new { id = 1 })">
 
-                        <img src="https://product.hstatic.net/1000281824/product/6e90f6d4329a43058f96e4b667c739d0_566f1d703b6744898863c749460b0f04_large.jpeg" alt="Hình ảnh 1">
+                            <img src="https://product.hstatic.net/1000281824/product/6e90f6d4329a43058f96e4b667c739d0_566f1d703b6744898863c749460b0f04_large.jpeg" alt="Hình ảnh 1">
                         </a>
                         <div class="detail">
                             <a href="ThongTinSanPham/1">Degrey Balo Simili Nap Basic - SNAP </a>
@@ -583,31 +575,9 @@
                 </div>
             </div>
             <a href="#" id="loadMore">Xem thêm sản phẩm</a>
-            
+
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-             aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Giỏ hàng</h5>
-                        <button type="button" class="btniconclose close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <table class="show-cart table">
-                        </table>
-                        <div class="grand-total">Tổng tiền: ₹<span class="total-cart"></span></div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btnclose btn btn-secondary" data-dismiss="modal">Close</button>
-                        <!-- <button type="button" class="btn btn-danger clear-all">Clear All</button> -->
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
 <script>
@@ -622,15 +592,13 @@
             const products = Array.from(productList.children);
 
             // Xác định cách sắp xếp dựa trên tùy chọn của người dùng
-            if (sortBy === "Giá: Tăng dần")
-            {
+            if (sortBy === "Giá: Tăng dần") {
                 products.sort((a, b) => {
                     const priceA = parseFloat(a.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
                     const priceB = parseFloat(b.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
                     return priceA - priceB;
                 });
-            } else if (sortBy === "Giá: Giảm dần") 
-            {
+            } else if (sortBy === "Giá: Giảm dần") {
                 products.sort((a, b) => {
                     const priceA = parseFloat(a.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
                     const priceB = parseFloat(b.querySelector(".amount").textContent.replace("₫", "").replace(",", ""));
@@ -678,20 +646,8 @@
 
             // Thêm sản phẩm đã sắp xếp lại vào danh sách
             products.forEach(product => productList.appendChild(product));
-        }      
-    });
-
-    $(function () {
-        $('#btnCart').click(function () {
-            $('#staticBackdrop').modal('show'); // hiện modal
-        });
-        $('.btnclose').click(function () {
-            $('#staticBackdrop').modal('hide');
-        });
-        $('.btniconclose').click(function () {
-            $('#staticBackdrop').modal('hide');
-        });
-    });
+        }
+    });    
     $(document).ready(function () {
         // Bắt sự kiện hover vào phần tử có ID "productDropdown"
         $("#productDropdown").hover(
