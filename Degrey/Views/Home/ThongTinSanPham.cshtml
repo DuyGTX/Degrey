@@ -45,7 +45,7 @@
 
                                 </div>
                                 <div class="select-actions hidden-xs hidden-sm clearfix">
-                                    <div class="quantity-area clearfix">
+                                    <div class="quantity-area clearfix" style="width: 100%;">
                                         <input type="button" value="-" onclick="minusQuantity()" class="qty-btn">
                                         <input type="text" id="quantity" name="quantity" value="1" min="1" style="width:60px" class="quantity-input">
                                         <input type="button" value="+" onclick="plusQuantity()" class="qty-btn">
@@ -65,28 +65,18 @@
                             </form>
                         </div>
                         <div class="product-heading">
-                            <h1>@ViewBag.ProductName</h1>
-                            @*<ul class="product-meta hidden-lg hidden-md hidden-sm hidden-xs">
-
-                                    <li class="pro-sku">Mã sản phẩm: <span>BCN</span></li>
-
-                                    <li class="pro-vendor">
-                                        Thương hiệu:
-                                        <a href="/collections/vendors?q=degrey">DEGREY</a>
-                                    </li>
-
-                                </ul>*@
+                            <h1>@ViewBag.ProductName</h1>                       
                         </div>
                         <div class="product-price">
 
-                            <del>@String.Format("{0:N0}", ViewBag.Price) ₫</del>
+                            <del>@String.Format("{0:N0}", ViewBag.Price)₫</del>
 
-                            <span class="pro-price">@String.Format("{0:N0}", ViewBag.PriceRetail) ₫</span>
+                            <span class="pro-price">@String.Format("{0:N0}", ViewBag.PriceRetail)₫</span>
 
-                            <span class="pro-percent">@ViewBag.Discount % giảm</span>
+                            <span class="pro-percent">@ViewBag.Discount% giảm</span>
                         </div>
                     </div>
-                    <div class="product-available">
+                    @*<div class="product-available">
                         <p class="txt-inventory">
 
 
@@ -101,7 +91,7 @@
                     </div>
                     <div class="product-coutdown product-coutdown-jsdata">
 
-                    </div>
+                    </div>*@
                     <div class="product-policy-detail">
                         <div class="item-policy-detail">
                             Freeship đơn hàng giá trị trên 1 triệu đồng
@@ -114,7 +104,7 @@
 
                     <div class="product-description product-description--accordion">
                         <div class="panel-group opened">
-                            <div class="panel-title"><h2>THông tin sản phẩm <i class="fa fa-plus"></i></h2></div>
+                            <div class="panel-title" onclick="togglePanel()"><h2>THông tin sản phẩm <i class="fa fa-plus"></i></h2></div>
                             <div class="panel-description " style="display:block">
                                 <div class="description-productdetail typeList-style">	<p>- Chất liệu: simili</p><p>- Hoạ tiết:logo dập</p><p>- Size:&nbsp;ngang 30cm, rộng 12cm, cao 41cm&nbsp;</p><p>- Ngăn chống sốc đựng vừa laptop 15inch</p><p>- Thương hiệu: Degrey</p><p>- Sản xuất: Việt Nam</p><p>- Màu sắc và họa tiết được thiết kế riêng bởi team design DEGREY</p><p>&nbsp;</p><p>+ HƯỚNG DẪN BẢO QUẢN SẢN PHẨM DEGREY:</p><p>- Không dùng hóa chất tẩy mạnh lên sản phẩm</p><p>- Không dùng vật dụng sắc, nhọn cà trực tiếp lên bề mặt Balo</p><p>- Không giặt máy</p><p>- Sử dụng bàn chải có lông mềm</p><p>- Tuyệt đối không dùng bàn chải cước cứng sẽ gây ra các vết xước trên nền vải</p><p>&nbsp;</p><p>+ CHÍNH SÁCH ĐỔI SẢN PHẨM:</p><p>1.Điều kiện đổi hàng</p><p>- Bạn lưu ý giữ lại hoá đơn để đổi hàng trong vòng 30 ngày.</p><p>- Đối với mặt hàng giảm giá, phụ kiện cá nhân (áo lót, khẩu trang, vớ ...) không nhận đổi hàng.</p><p>- Tất cả sản phẩm đã mua sẽ không được đổi trả lại bằng tiền mặt.</p><p>- Bạn có thể đổi size hoặc sản phẩm khác trong 30 ngày (Lưu ý: sản phẩm chưa qua sử dụng, còn tag nhãn và hóa đơn mua hàng.)</p><p>- Bạn vui lòng gửi cho chúng mình clip đóng gói và hình ảnh của đơn hàng đổi trả của bạn, nhân viên tư vấn sẽ xác nhận và tiến hành lên đơn đổi trả cho bạn.</p><p>&nbsp;</p><p>2. Trường hợp khiếu nại</p><p>- Bạn phải có video unbox hàng</p><p>- Quay video rõ nét 6 mặt của gói hàng</p><p>- Quay rõ: Tên người nhận, mã đơn, địa chỉ, số điện thoại.</p><p>- Video không cắt ghép, chỉnh sửa</p><p>- Degrey xin không tiếp nhận giải quyết các trường hợp không thỏa các điều kiện trên.</p>	</div>
                             </div>
@@ -276,5 +266,13 @@ Với các kênh chat, email &amp; phone">
             sessionStorage.setItem("tableData", tableDataJson);
         });              
     });
+    function togglePanel() {
+        var panelDescription = document.querySelector('.panel-description');
+        if (panelDescription.style.display === 'block') {
+            panelDescription.style.display = 'none';
+        } else {
+            panelDescription.style.display = 'block';
+        }
+    }
 </script>
 

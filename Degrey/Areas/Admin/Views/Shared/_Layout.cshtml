@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/admin.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/MasterLayout.css" rel="stylesheet" />
+    <link href="~/Content/Font/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+</head>
+<body>
+    <header class="contain-all" style="height: 90px">
+
+        <div class="web-header" style="height:90px">
+            <div class="container" style="max-width: 1140px; height: 90px">
+                <div class="header-layout">
+                    <div class="logo-grid">
+                        <div class="wrap-logo">
+                            <a href="Home">
+                                <img style="height:auto" src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="Day la anh" class="logo" />
+                            </a>
+
+                            <div class="search-tool">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #c7c7c7; margin: 0 10px"></i>
+
+                                <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." class="search-item" />
+
+                            </div>
+                            <a href="GioHang" class="cart">
+                                <span class="material-symbols-outlined">
+                                    shopping_cart
+                                </span>
+                                <div class="cart-title">
+                                    Giỏ hàng
+                                </div>
+                                <div class="amount">0</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu-grid">
+                        <ul class="menu-list">
+                            <li class="menu-item"><a href="TrangChu">Trang chủ</a></li>
+                            <li class="menu-item"><a href="SanPham">Sản phẩm</a></li>
+                            <li class="menu-item"><a href="Store">Store</a></li>
+                            <li class="menu-item"><a href="GioiThieu">Giới thiệu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </header>
+    <content>
+
+        @RenderBody()
+
+    </content>
+    <footer class="web-footer">
+        <div class="footer-content">
+            <div class="container" style="max-width: 1140px;max-height:482px">
+
+
+                <div class="contact-method">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="contact-info-details">
+                                    <div class="contact-grid" style="display: grid;">
+                                        <span class="contact-details">Bán hàng 9:00 - 22:00</span>
+                                        <span class="contact-details">
+                                            <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                            <a>0336311117</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="contact-info-details">
+                                    <div class="contact-grid" style="display: grid;">
+                                        <span class="contact-details">Khiếu nại 9:00 - 21:30</span>
+                                        <span class="contact-details">
+                                            <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                            <a>0775913335</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="more-info-btn" id="expand-info">
+                                    <div class="more-info-contain" onclick="toggleInfo()">
+                                        <span class="more-info-text">Xem thêm thông tin</span>
+                                        <span class="more-info-icon" id="expand-icon">
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function toggleInfo() {
+                        var infoBox = document.getElementById("expand-info");
+                        var expandIcon = document.getElementById("expand-icon");
+
+
+                        if (infoBox.classList.contains("expanded")) {
+                            infoBox.classList.remove("expanded");
+                            expandIcon.innerHTML = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
+                        } else {
+                            infoBox.classList.add("expanded");
+                            expandIcon.innerHTML = '<i class="fa fa-angle-up" aria-hidden="true"></i>';
+                        }
+                    }
+                </script>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list ">
+                        <h3 class="footer-column">Về DEGREY</h3>
+                        <div class="column-item text-white"><p>Cái tên Degrey được tạo ra rất ngẫu hứng, xuất phát từ “Chuỗi ngày u buồn về sự nghiệp, tương lai trong quá khứ của chính mình” – theo lời chia sẻ của Degrey’s founder.</p></div>
+                        <div class="column-item1 text-white">CÔNG TY TNHH DEGREY</div>
+                        <div class="column-item text-white"><p>0315986019 0315986019 cấp ngày 31/10/2019 tại Sở kế hoạch đầu tư TPHCM</p></div>
+                        <img class="logo-footer" src="https://file.hstatic.net/1000281824/file/dathongbao_22c990fc936b40e0a50a1b646f478284.png" alt="logo footer" />
+
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list-2">
+                        <div class="column-item text-white address">Địa chỉ</div>
+                        <div class="column-item text-white location">-Sài Gòn:</div>
+                        <div class="column-item text-white">
+                            <p>
+                                43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận<br>
+                                1041 Luỹ Bán Bích P.Tân Thành Q.Tân Phú
+                            </p>
+                        </div>
+                        <div class="phone column-item text-white">
+                            <b>Điện thoại: </b>
+                            0336311117
+                        </div>
+
+                        <div class="email column-item text-white">
+                            <b>Email:  </b>
+                            degrey.vn@gmail.com
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list">
+                        <h3 class="footer-column">Hỗ trợ khách hàng</h3>
+                        <ul class="store-info-list">
+                            <li><a href="GioiThieu">Giới thiệu Degrey</a></li>
+                            <li><a href="Store">Hệ thống cửa hàng</a></li>
+                            <li><a href="HuongDanDatHang">Hướng dẫn đặt hàng</a></li>
+                            <li><a href="ChinhSachVaQuyDinh">Chính sách và quy định</a></li>
+                            <li><a href="ChinhSachBaoMat">Chính sách bảo mật</a></li>
+                            <li><a href="ThongTinSoHuu">Thông tin hữu ích</a></li>
+
+                        </ul>
+
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list">
+                        <h3 class="footer-column">Chăm sóc khách hàng</h3>
+                        <div class="store-info-list">
+                            <i class="fa-solid fa-phone icon-call"></i>
+                            <div class="contact">
+                                <span>0336311117</span><br>
+                                <u>degrey.vn@gmail.com</u>
+                            </div>
+                        </div>
+                        <div class="footer-social-media">
+                            <h4 class="footer-column1">
+                                Follow Us
+                            </h4>
+
+                            <ul class="media-page">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </footer>
+    <div class="footer-end">
+        <div class="container" style="height:45.6px">
+            <p>
+                Copyright © 2023 <a href="#" style="color: white;text-decoration: none;"> DEGREY VIETNAM</a>
+                <a>Powered by Haravan</a>
+            </p>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

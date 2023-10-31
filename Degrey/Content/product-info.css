@@ -4,11 +4,11 @@
     margin-left: 10px;
     background: #f94c43;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 13px;
     color: white;
     vertical-align: text-bottom;
-    font-family: "Quicksand", sans-serif;
+   
 }
 
 .container {
@@ -16,7 +16,7 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1170px;
+    max-width: 1140px;
 }
 .product-container-order {
     padding-left: 15px;
@@ -31,7 +31,7 @@
     margin-bottom: 15px;
 }
 .product-heading {
-   
+    margin-bottom: 15px;
     order: 0;
 }
     .product-heading h1 {
@@ -56,6 +56,56 @@
     font-weight: 600;
     color: red;
 }
+.productDetail--content .product-policy-detail {
+    background: #ffffff;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0 0 !important;
+    margin: 0 !important;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.product-policy-detail .item-policy-detail {
+    background: rgba(236, 235, 232, 0.65);
+    padding: 15px;
+    width: 49%;
+    text-align: center;
+    font-weight: bold;
+   
+    display: flex;
+    
+    align-items: center;
+   
+    justify-content: center;
+}
+.panel-group .panel-title h2 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    padding: 20px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+.product-description .panel-group .panel-title {
+    position: relative;
+}
+.description-productdetail p{
+    color: #000000;
+    line-height: 1.45;
+    font-size: 14px;
+    font-family:sans-serif;
+}
+.panel-title {
+    cursor: pointer;
+}
+
+.panel-description {
+    display: none;
+}
+
 .quantity-input {
     background: #fff;
     font-weight: 600;
@@ -86,11 +136,11 @@
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    -o-appearance: none;
+   
     appearance: none;
 }
 .btn-addtocart {
-    width: 50%;
+    width: 67%;
     height: 45px;
     line-height: 45px;
     padding: 0 15px;
@@ -100,7 +150,6 @@
     float: right;
 }
 .select-actions {
-    width: calc(100% - 150px);
+    width: 100%;
     float: left;
-    padding-left: 15px;
 }
