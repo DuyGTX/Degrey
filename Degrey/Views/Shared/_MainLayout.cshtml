@@ -245,6 +245,24 @@
 <script>
     $(function () {
         $('#btnCart').click(function () {
+            //debugger
+            //// Đọc dữ liệu từ SessionStorage
+            //var tableDataJson = sessionStorage.getItem("tableData");
+
+            //// Kiểm tra xem dữ liệu đã tồn tại
+            //if (tableDataJson) {
+            //    var tableData = JSON.parse(tableDataJson);
+
+            //    // Hiển thị dữ liệu lên DataTable
+            //    var table = document.querySelector("#data-table tbody");
+            //    table.innerHTML = "";
+
+            //    tableData.forEach(function (rowData) {
+            //        var row = document.createElement("tr");
+            //        row.innerHTML = "<td>" + rowData.productName + "</td><td>" + rowData.price + "</td><td>" + rowData.quantity + "</td>";
+            //        table.appendChild(row);
+            //    });
+            //}
             $('#staticBackdrop').modal('show'); // hiện modal
         });
         $('.btnclose').click(function () {

@@ -243,15 +243,23 @@ Với các kênh chat, email &amp; phone">
             $('.show-cart').append(rowHtml);
             var total = 0;
             var count = 0;
+            var tableData = [];
             // Lặp qua từng hàng trong bảng
-            $('#cart-table tbody tr').each(function () {                
-                debugger                
-                var Quantity = parseInt($(this).find('td').eq(2).text()); 
-                console.log($(this).find('td').eq(2).text());
+            $('#cart-table tbody tr').each(function () {  
+
+                var Quantity = parseInt($(this).find('td').eq(2).text());
                 var Price = parseInt($(this).find('td').eq(3).text());                
                 var productTotal = Quantity * Price;
                 total += productTotal;
                 count++;
+
+                var rowData = {
+                    productImage: $(this).find('td').eq(0).text(),
+                    productName: $(this).find('td').eq(1).text(), 
+                    quantity: parseInt($(this).find('td').eq(2).text()),
+                    price: parseFloat($(this).find('td').eq(3).text()),
+                };
+                tableData.push(rowData);
             });
 
             $('#count_detailorder').text(count);
@@ -260,6 +268,12 @@ Với các kênh chat, email &amp; phone">
 
             // Mở modal
             $('#staticBackdrop').modal('show');
+            debugger
+            // Chuyển dữ liệu thành chuỗi JSON
+            var tableDataJson = JSON.stringify(tableData);
+
+            // Lưu chuỗi JSON vào SessionStorage
+            sessionStorage.setItem("tableData", tableDataJson);
         });              
     });
 </script>
