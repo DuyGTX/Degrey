@@ -235,3 +235,252 @@ D:\1.Source\Degrey\Degrey\obj\Debug\Degrey.csproj.CoreCompileInputs.cache
 D:\1.Source\Degrey\Degrey\obj\Debug\Degrey.csproj.CopyComplete
 D:\1.Source\Degrey\Degrey\obj\Debug\Degrey.dll
 D:\1.Source\Degrey\Degrey\obj\Debug\Degrey.pdb
+D:\TestDegreyDB\Degrey\Degrey\obj\Debug\Degrey.csproj.AssemblyReference.cache
+D:\TestDegreyDB\Degrey\Degrey\obj\Debug\Degrey.csproj.CoreCompileInputs.cache
+D:\TestDegreyDB\Degrey\Degrey\obj\Debug\Degrey.dll
+D:\TestDegreyDB\Degrey\Degrey\obj\Debug\Degrey.pdb
+D:\TestDegreyDB\Degrey\Degrey\bin\Degrey.dll.config
+D:\TestDegreyDB\Degrey\Degrey\bin\Degrey.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\Degrey.pdb
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\csc.exe
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\csc.exe.config
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\csc.rsp
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\csi.exe
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\csi.exe.config
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\csi.rsp
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.Managed.Core.targets
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.AppContext.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Collections.Immutable.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Console.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Globalization.Calendars.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.IO.Compression.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.IO.FileSystem.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Net.Http.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Net.Sockets.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Reflection.Metadata.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.ValueTuple.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Xml.XmlDocument.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Xml.XPath.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\vbc.exe
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\vbc.exe.config
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\vbc.rsp
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\VBCSCompiler.exe
+D:\TestDegreyDB\Degrey\Degrey\bin\roslyn\VBCSCompiler.exe.config
+D:\TestDegreyDB\Degrey\Degrey\bin\Antlr3.Runtime.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\EntityFramework.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\EntityFramework.SqlServer.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\Microsoft.Web.Infrastructure.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\Newtonsoft.Json.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Helpers.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Mvc.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Optimization.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Razor.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.WebPages.Deployment.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.WebPages.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.WebPages.Razor.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\WebGrease.dll
+D:\TestDegreyDB\Degrey\Degrey\bin\EntityFramework.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\EntityFramework.SqlServer.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Helpers.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Mvc.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Optimization.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.Razor.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.WebPages.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.WebPages.Deployment.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\System.Web.WebPages.Razor.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\Newtonsoft.Json.xml
+D:\TestDegreyDB\Degrey\Degrey\bin\Antlr3.Runtime.pdb
+D:\TestDegreyDB\Degrey\Degrey\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TestDegreyDB\Degrey\Degrey\obj\Debug\Degrey.csproj.CopyComplete
+D:\TestDegreyDB - Clone\Degrey\Degrey\obj\Debug\Degrey.csproj.AssemblyReference.cache
+D:\TestDegreyDB - Clone\Degrey\Degrey\obj\Debug\Degrey.csproj.CoreCompileInputs.cache
+D:\TestDegreyDB - Clone\Degrey\Degrey\obj\Debug\Degrey.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\obj\Debug\Degrey.pdb
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Degrey.dll.config
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Degrey.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Degrey.pdb
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\csc.exe
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\csc.exe.config
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\csc.rsp
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\csi.exe
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\csi.exe.config
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\csi.rsp
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.Managed.Core.targets
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.AppContext.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Collections.Immutable.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Console.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Globalization.Calendars.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.IO.Compression.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.IO.FileSystem.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Net.Http.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Net.Sockets.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Reflection.Metadata.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.ValueTuple.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Xml.XmlDocument.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Xml.XPath.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\vbc.exe
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\vbc.exe.config
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\vbc.rsp
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\VBCSCompiler.exe
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\roslyn\VBCSCompiler.exe.config
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Antlr3.Runtime.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\EntityFramework.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\EntityFramework.SqlServer.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Microsoft.Web.Infrastructure.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Newtonsoft.Json.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Helpers.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Mvc.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Optimization.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Razor.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.WebPages.Deployment.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.WebPages.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.WebPages.Razor.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\WebGrease.dll
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\EntityFramework.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\EntityFramework.SqlServer.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Helpers.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Mvc.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Optimization.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.Razor.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.WebPages.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.WebPages.Deployment.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\System.Web.WebPages.Razor.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Newtonsoft.Json.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Antlr3.Runtime.pdb
+D:\TestDegreyDB - Clone\Degrey\Degrey\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TestDegreyDB - Clone\Degrey\Degrey\obj\Debug\Degrey.csproj.CopyComplete
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Degrey.dll.config
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Degrey.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Degrey.pdb
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\csc.exe
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\csc.exe.config
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\csc.rsp
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\csi.exe
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\csi.exe.config
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\csi.rsp
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.AppContext.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Collections.Immutable.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Console.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Globalization.Calendars.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.IO.Compression.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.IO.FileSystem.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Net.Http.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Net.Sockets.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Reflection.Metadata.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.ValueTuple.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Xml.XPath.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\vbc.exe
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\vbc.exe.config
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\vbc.rsp
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\VBCSCompiler.exe
+D:\Degrey_Big_Update\Degrey\Degrey\bin\roslyn\VBCSCompiler.exe.config
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Antlr3.Runtime.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\EntityFramework.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\EntityFramework.SqlServer.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Microsoft.Web.Infrastructure.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Newtonsoft.Json.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Helpers.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Mvc.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Optimization.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Razor.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.WebPages.Deployment.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.WebPages.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.WebPages.Razor.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\WebGrease.dll
+D:\Degrey_Big_Update\Degrey\Degrey\bin\EntityFramework.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\EntityFramework.SqlServer.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Helpers.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Mvc.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Optimization.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.Razor.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.WebPages.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.WebPages.Deployment.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\System.Web.WebPages.Razor.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Newtonsoft.Json.xml
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Antlr3.Runtime.pdb
+D:\Degrey_Big_Update\Degrey\Degrey\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.csproj.AssemblyReference.cache
+D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.csproj.CoreCompileInputs.cache
+D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.csproj.CopyComplete
+D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.dll
+D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.pdb

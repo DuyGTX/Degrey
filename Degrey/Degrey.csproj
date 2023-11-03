@@ -45,11 +45,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,16 +132,54 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CustomerProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ManageProductDB.cs">
-      <DependentUpon>ManageProductDB.dbml</DependentUpon>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ManageProductDB.designer.cs">
+    <Compile Include="Models\Color.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gallery.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ManageProductDB.dbml</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2228,6 +2274,20 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\DegreyDoubleLeather.jpeg" />
+    <Content Include="Image\DegreyLeatherBasic.jpg" />
+    <Content Include="Image\DegreyMediumLeather.png" />
+    <Content Include="Image\home_login.png" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -2287,14 +2347,16 @@
     <Content Include="Content\Font\fontawesome-free-6.4.2-web\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\Font\fontawesome-free-6.4.2-web\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Content\Font\fontawesome-free-6.4.2-web\webfonts\fa-v4compatibility.woff2" />
-    <Content Include="Models\ManageProductDB.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>ManageProductDB.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2320,7 +2382,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />
-    <Content Include="Views\Home\SanPham.cshtml" />
     <Content Include="Views\Home\Store.cshtml" />
     <Content Include="Views\Home\Cart.cshtml" />
     <Content Include="Views\Home\GioiThieu.cshtml" />
@@ -2328,12 +2389,12 @@
     <Content Include="Views\Home\HuongDanDatHang.cshtml" />
     <Content Include="Views\Home\ChinhSachBaoMat.cshtml" />
     <Content Include="Views\Home\ChinhSachVaQuyDinh.cshtml" />
-    <Content Include="Views\Home\ThongTinSanPham.cshtml" />
+    <Content Include="Views\CustomerProduct\SanPham.cshtml" />
+    <Content Include="Views\CustomerProduct\ThongTinSP.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -2364,11 +2425,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Models\ManageProductDB.dbml.layout">
-      <DependentUpon>ManageProductDB.dbml</DependentUpon>
-    </None>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

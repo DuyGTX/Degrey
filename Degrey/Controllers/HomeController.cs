@@ -10,14 +10,7 @@ namespace Degrey.Controllers
 {    
     public class HomeController : Controller
     {
-        private ManageProductDBDataContext db; // Khai báo đối tượng DataContext
-
-        public HomeController()
-        {
-            // Cung cấp chuỗi kết nối cơ sở dữ liệu cho constructor
-            string connectionString = "Data Source=LAPTOP-DUY\\SQLEXPRESS;Initial Catalog=ManageStore;Integrated Security=True";
-            db = new ManageProductDBDataContext(connectionString);
-        }
+        DBDegreyStoreEntities db = new DBDegreyStoreEntities();
 
         public ActionResult Index()
         {
@@ -43,6 +36,7 @@ namespace Degrey.Controllers
         }
         public ActionResult SanPham()
         {
+            
             return View();
         }
         public ActionResult Store()
@@ -76,26 +70,28 @@ namespace Degrey.Controllers
         public ActionResult Thongtinsanpham(int id)
         {
             // Sử dụng đối tượng db để truy cập cơ sở dữ liệu
-            var product = db.ListProducts.FirstOrDefault(p => p.ID == id);
+            var product = db.Products.FirstOrDefault(p => p.ProID == id);
 
             if (product != null)
             {
-                ViewBag.ProductID = product.ID;
-                ViewBag.ProductName = product.ProductName;
+                ViewBag.ProID = product.ProID;
+                ViewBag.ProName = product.ProName;
                 ViewBag.Price = Convert.ToInt32(product.Price);
                 ViewBag.Discount = product.Discount * 100;
-                ViewBag.PriceRetail = Convert.ToInt32(product.PriceRetail);
-                ViewBag.ImageName = product.ImageName;
+                ViewBag.PriceSale = Convert.ToInt32(product.PriceSale);
+                ViewBag.ProImage = product.ProImage;
                 // Các thông tin sản phẩm khác
-            }  
+            }
             return View();
         }
 
-        public ActionResult GetImageName(string ProductName)
+
+        public ActionResult GetImageName(string ProductName) //dùng để lấy ra tên hình ảnh trong session  lưu bảng tạm trong giỏ hàng 
         {
-            var product = db.ListProducts.FirstOrDefault(p => p.ProductName == ProductName);
-            return Content(JsonConvert.SerializeObject(product.ImageName), "application/json");
+            var product = db.Products.FirstOrDefault(p => p.ProName == ProductName);
+            return Content(JsonConvert.SerializeObject(product.ProImage), "application/json");
         }
+
 
     }
 }

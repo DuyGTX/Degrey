@@ -12,6 +12,13 @@
     margin-left: auto;
     max-width:1140px;
 }
+del {
+    color: #808080;
+    text-decoration: line-through;
+    padding: 0 5px; /* Điều chỉnh giá trị tùy ý */
+    font-family:sans-serif;
+}
+
 .wrap-breadcrumb {
     height: 100%;
     padding: 9px 0;
