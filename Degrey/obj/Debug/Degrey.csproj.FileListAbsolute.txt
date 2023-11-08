@@ -484,3 +484,7 @@ D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.csproj.CoreCompileInputs.cac
 D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.csproj.CopyComplete
 D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.dll
 D:\Degrey_Big_Update\Degrey\Degrey\obj\Debug\Degrey.pdb
+D:\1.Source\Degrey\Degrey\bin\EntityFramework.dll
+D:\1.Source\Degrey\Degrey\bin\EntityFramework.SqlServer.dll
+D:\1.Source\Degrey\Degrey\bin\EntityFramework.xml
+D:\1.Source\Degrey\Degrey\bin\EntityFramework.SqlServer.xml

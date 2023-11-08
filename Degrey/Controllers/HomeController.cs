@@ -30,6 +30,10 @@ namespace Degrey.Controllers
 
             return View();
         }
+        public ActionResult Test()
+        {
+            return View();
+        }
         public ActionResult Home()
         {
             return View();
