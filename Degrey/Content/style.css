@@ -1,4 +1,5 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+﻿/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
     margin: 0;
@@ -6,23 +7,30 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
+.image {
+    width: 86px;
+    height: 70px;
+}
 .sidebar {
     position: fixed;
     height: 100%;
     width: 260px;
-    background: #11101d;
+    background: #f1f1f1;
     padding: 15px;
     z-index: 99;
 }
 
-.logo {
+.logo-sidebar {
+    justify-content: center;
+    display: grid;
+    font-size: 25px;
+    padding: 0px 114px;
     font-size: 25px;
     padding: 0 15px;
 }
 
 .sidebar a {
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 
@@ -50,7 +58,7 @@
 }
 
 .menu-title {
-    color: #fff;
+    color: black;
     font-size: 14px;
     padding: 15px 20px;
 }
@@ -77,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: black;
     cursor: pointer;
 }
 
@@ -120,11 +128,12 @@
 }
 
 .navbar {
+    height: 50px;
     position: fixed;
-    color: #fff;
+    color: #f1f1f1;
     padding: 15px 20px;
     font-size: 25px;
-    background: #4070f4;
+    color: black;
     cursor: pointer;
 }
 
@@ -137,13 +146,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     z-index: 100;
-    background: #e7f2fd;
+    background: white;
 }
 
     .main h1 {
-        color: #11101d;
+        color: #f1f1f1;
         font-size: 40px;
         text-align: center;
     }

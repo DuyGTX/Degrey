@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/header-footer.css" rel="stylesheet" />
-    <link href="~/Content/manage.css" rel="stylesheet" />
+    
+    <link href="~/Content/style.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
 
     <link href="~/Content/Font/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
@@ -17,227 +19,75 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div id="viewport">
-        <!-- Sidebar -->
-        <div id="sidebar">
-            <header>
-                <a href="#">My App</a>
-            </header>
-            <ul class="nav">
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-view-dashboard"></i> Dashboard
-                    </a>
+    @*<header>
+        <nav class="navbar" style="background: White; ">
+            
+        </nav>
+
+    </header>*@
+    <nav class="sidebar">
+        <a href="#" class="logo-sidebar"><img src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="Day la anh" class="image" /></a>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <div class="menu-title">Your menu title</div>
+                <li class="item">
+                    <a href="#">Your first link</a>
                 </li>
-                
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-link"></i> Shortcuts
-                    </a>
+                <li class="item">
+                    <div class="submenu-item">
+                        <span>First submenu</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <ul class="menu-items submenu">
+                        <div class="menu-title">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            Your submenu title
+                        </div>
+                        <li class="item">
+                            <a href="#">First sublink</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">First sublink</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">First sublink</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-widgets"></i> Overview
-                    </a>
+                <li class="item">
+                    <div class="submenu-item">
+                        <span>Second submenu</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <ul class="menu-items submenu">
+                        <div class="menu-title">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            Your submenu title
+                        </div>
+                        <li class="item">
+                            <a href="#">Second sublink</a>
+                        </li>
+
+                    </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-calendar"></i> Events
-                    </a>
+                <li class="item">
+                    <a href="#">Your second link</a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-info-outline"></i> About
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-settings"></i> Services
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="zmdi zmdi-comment-more"></i> Contact
-                    </a>
+                <li class="item">
+                    <a href="#">Your third link</a>
                 </li>
             </ul>
         </div>
 
+    </nav>
+    <nav class="navbar" style="background: #f1f1f1; ">
+        <i class="fa-solid fa-bars" id="sidebar-close"></i>
+    </nav>
+    <content class="main">
 
-        <!-- Content -->
-        <div id="content">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">
-                                <i class="zmdi zmdi-notifications text-danger"></i>
-                            </a>
-                        </li>
-                        <li><a href="#">Test User</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="container-fluid">
-                <h1>Simple Sidebar</h1>
-                <p>
-                    Make sure to keep all page content within the
-                    <code>#content</code>.
-                </p>
-            </div>
-            @RenderBody()
-        </div>
-        
-    </div>
-    <footer class="main-footer">
-        <div class="footer-info">
-            <div class="container" style="max-width: 1140px;max-height:482px">
-
-                <!-- Chuyển về dạng mobile -->
-                <div class="contact-details">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="contact-info">
-                                    <div class="contact-info-box" style="display: grid;">
-                                        <span class="contact-info-text">Bán hàng 9:00 - 22:00</span>
-                                        <span class="contact-info-text">
-                                            <i class="fa fa-phone-square" aria-hidden="true"></i>
-                                            <a>0336311117</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="contact-info">
-                                    <div class="contact-info-box" style="display: grid;">
-                                        <span class="contact-info-text">Khiếu nại 9:00 - 21:30</span>
-                                        <span class="contact-info-text">
-                                            <i class="fa fa-phone-square" aria-hidden="true"></i>
-                                            <a>0775913335</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="expand-button" id="expand-info">
-                                    <div class="expand-button-box" onclick="toggleInfo()">
-                                        <span class="expand-button-text expand-button-initial">Xem thêm thông tin</span>
-                                        <span class="expand-button-icon" id="expand-icon">
-                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    function toggleInfo() {
-                        var infoBox = document.getElementById("expand-info");
-                        var expandIcon = document.getElementById("expand-icon");
-
-                        // Kiểm tra trạng thái hiển thị của thông tin mở rộng
-                        if (infoBox.classList.contains("expanded")) {
-                            infoBox.classList.remove("expanded");
-                            expandIcon.innerHTML = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
-                        } else {
-                            infoBox.classList.add("expanded");
-                            expandIcon.innerHTML = '<i class="fa fa-angle-up" aria-hidden="true"></i>';
-                        }
-                    }
-                </script>
-                <!-- Chuyển về dạng mobile -->
-                <div class="row">
-                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list ">
-                        <h3 class="col-footer">Về DEGREY</h3>
-                        <div class="col-3-item text-white"><p>Cái tên Degrey được tạo ra rất ngẫu hứng, xuất phát từ “Chuỗi ngày u buồn về sự nghiệp, tương lai trong quá khứ của chính mình” – theo lời chia sẻ của Degrey’s founder.</p></div>
-                        <div class="col-3-item1 text-white">CÔNG TY TNHH DEGREY</div>
-                        <div class="col-3-item text-white"><p>0315986019 0315986019 cấp ngày 31/10/2019 tại Sở kế hoạch đầu tư TPHCM</p></div>
-                        <img class="logo-footer" src="https://file.hstatic.net/1000281824/file/dathongbao_22c990fc936b40e0a50a1b646f478284.png" alt="logo footer" />
-
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list-2">
-                        <div class="col-3-item text-white address">Địa chỉ</div>
-                        <div class="col-3-item text-white where">-Sài Gòn:</div>
-                        <div class="col-3-item text-white">
-                            <p>
-                                43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận<br>
-                                1041 Luỹ Bán Bích P.Tân Thành Q.Tân Phú
-                            </p>
-                        </div>
-                        <div class="phone col-3-item text-white">
-                            <b>Điện thoại: </b>
-                            0336311117
-                        </div>
-
-                        <div class="email col-3-item text-white">
-                            <b>Email:  </b>
-                            degrey.vn@gmail.com
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list">
-                        <h3 class="col-footer">Hỗ trợ khách hàng</h3>
-                        <ul class="pro-list">
-                            <li><a href="GioiThieu">Giới thiệu Degrey</a></li>
-                            <li><a href="Store">Hệ thống cửa hàng</a></li>
-                            <li><a href="HuongDanDatHang">Hướng dẫn đặt hàng</a></li>
-                            <li><a href="ChinhSachVaQuyDinh">Chính sách và quy định</a></li>
-                            <li><a href="ChinhSachBaoMat">Chính sách bảo mật</a></li>
-                            <li><a href="ThongTinSoHuu">Thông tin hữu ích</a></li>
-
-                        </ul>
-
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12 footer-list">
-                        <h3 class="col-footer">Chăm sóc khách hàng</h3>
-                        <div class="box-contact">
-                            <i class="fa-solid fa-phone icon-call"></i>
-                            <div class="contact">
-                                <span>0336311117</span><br>
-                                <u>degrey.vn@gmail.com</u>
-                            </div>
-                        </div>
-                        <div class="footer-list-social">
-                            <h4 class="col-footer1">
-                                Follow Us
-                            </h4>
-
-                            <ul class="social">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            </ul>
-
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </footer>
-    <div class="footer-copyright" style="max-height:45.6px">
-        <div class="container">
-            <p>
-                Copyright © 2023 <a href="#" style="color: white;text-decoration: none;"> DEGREY VIETNAM</a>
-                <a>Powered by Haravan</a>
-            </p>
-        </div>
-
-
-
-    </div>
-
-    
+        @RenderBody()
+    </content>
+    <script src="~/Content/script.js"></script>
 </body>
 
 </html>

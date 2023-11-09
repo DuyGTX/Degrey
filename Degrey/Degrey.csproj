@@ -2272,7 +2272,9 @@
     <Content Include="Content\header-footer.css" />
     <Content Include="Content\manage.css" />
     <Content Include="Content\product-info.css" />
+    <Content Include="Content\script.js" />
     <Content Include="Content\store.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\Ttsh.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
