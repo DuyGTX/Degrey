@@ -2279,10 +2279,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\CLBB.png" />
     <Content Include="Image\DegreyDoubleLeather.jpeg" />
     <Content Include="Image\DegreyLeatherBasic.jpg" />
     <Content Include="Image\DegreyMediumLeather.png" />
     <Content Include="Image\home_login.png" />
+    <Content Include="Image\MLBB.jpeg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
