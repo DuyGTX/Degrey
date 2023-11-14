@@ -224,10 +224,10 @@ Với các kênh chat, email &amp; phone">
 
 
             // Hiển thị thông số trong modal
-            var rowHtml = '<tr><td><img style="width:100px;height:100px" src="/Image/' + productImage + '"/></td>' +
+            var rowHtml = '<tr><td><img style="width:100px;height:100px;border: 1px solid #ededed;" src="/Image/' + productImage + '"/></td>' +
                 '<td>' + productName + '</td>' +
                 '<td>' + productQuantity + '</td>' +
-                '<td>' + productPriceRetail + '</td>' +
+                '<td>' + productPriceRetail + '<span>₫</span></td>' +
                 '<td><button class="btn btn-sm btn-danger" style="text-align:center" onclick="deleteRow(this)"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr >';
             $('.show-cart').append(rowHtml);
             var total = 0;
@@ -253,7 +253,7 @@ Với các kênh chat, email &amp; phone">
 
             $('#count_detailorder').text(count);
             // Hiển thị tổng tiền
-            $('.total-cart').text(total); // Định dạng tổng tiền với hai số thập phân
+            $('.total-cart').text(total + ' ₫'); // Định dạng tổng tiền với hai số thập phân và thêm ₫
 
             // Mở modal
             $('#staticBackdrop').modal('show');

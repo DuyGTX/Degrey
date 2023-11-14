@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    
+
     <link href="~/Content/style.css" rel="stylesheet" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    
 
 
     <link href="~/Content/Font/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet" />
@@ -29,9 +32,10 @@
         <a href="#" class="logo-sidebar"><img src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="Day la anh" class="image" /></a>
         <div class="menu-content">
             <ul class="menu-items" style="padding-left: 0px; text-align: center;">
-                <div class="menu-title" style="font-size: 22px; font-weight: 600; font-family: sans-serif;">Quản lý sản phẩm</div>
+                <div class="menu-title" style="font-size: 22px; font-weight: 600; font-family: sans-serif;"></div>
                 <li class="item">
-                    <a href="#">Your first link</a>
+                    <a style="text-decoration: none; color: black; font-family: 'Concert One', sans-serif; "href="/Products/Index">Products</a>
+                   
                 </li>
                 <li class="item">
                     <div class="submenu-item">
@@ -71,16 +75,17 @@
                     </ul>
                 </li>
                 <li class="item">
-                    <a href="#">Your second link</a>
+                    <a style="text-decoration: none; color: black;" href="/Categories/Index">Category</a>
                 </li>
-                <li class="item">
-                    <a href="#">Your third link</a>
+                <li class="item" >
+                    <a style="text-decoration: none; color: black;" href="#">Your third link</a>
+                    
                 </li>
             </ul>
         </div>
 
     </nav>
-    <nav class="navbar" style="background: #f1f1f1; ">
+    <nav class="navbar" style="background: white; border-bottom: 2px solid #f1f1f1">
         <i class="fa-solid fa-bars" id="sidebar-close"></i>
     </nav>
     <content class="main">

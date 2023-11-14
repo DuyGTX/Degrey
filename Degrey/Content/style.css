@@ -38,7 +38,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    margin-top: 40px;
+    
     overflow-y: scroll;
 }
 
@@ -60,7 +60,7 @@
 .menu-title {
     color: black;
     font-size: 14px;
-    padding: 15px 20px;
+    
 }
 
 .item a,
@@ -156,3 +156,40 @@
         font-size: 40px;
         text-align: center;
     }
+
+.sidebar {
+    background-color: white;
+    border-right: 2px solid #f1f1f1;
+    overflow: hidden;
+}
+
+.item a {
+    font-size: 20px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-family: 'Concert One', sans-serif;
+    position: relative;
+    padding-left: 10px; /* Distance between text and black bar */
+    transition: padding-left 0.3s; /* Transition effect on hover */
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    left: -4px; /* Move the black bar outside the .item */
+    top: 0;
+    height: 100%;
+    width: 4px; /* Adjust the width of the black bar */
+    background-color: black; /* Color of the black bar */
+    opacity: 0; /* Start with transparency */
+    transition: opacity 0.3s; /* Transition effect on hover */
+}
+
+.item:hover::before {
+    opacity: 1; /* Show the black bar on hover */
+}
+
+.item:hover a {
+    padding-left: 14px; /* Adjust the distance between text and black bar on hover */
+}

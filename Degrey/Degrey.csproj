@@ -132,6 +132,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\CustomerProductController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -2271,6 +2272,7 @@
     <Content Include="Content\Font\fontawesome-free-6.4.2-web\svgs\solid\z.svg" />
     <Content Include="Content\header-footer.css" />
     <Content Include="Content\manage.css" />
+    <Content Include="Content\mng-products.css" />
     <Content Include="Content\product-info.css" />
     <Content Include="Content\script.js" />
     <Content Include="Content\store.css" />
@@ -2279,12 +2281,38 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\ATRD.png" />
+    <Content Include="Image\ATRK.png" />
+    <Content Include="Image\BQDL.png" />
     <Content Include="Image\CLBB.png" />
+    <Content Include="Image\DCC.png" />
     <Content Include="Image\DegreyDoubleLeather.jpeg" />
     <Content Include="Image\DegreyLeatherBasic.jpg" />
     <Content Include="Image\DegreyMediumLeather.png" />
+    <Content Include="Image\DLCP.jpeg" />
+    <Content Include="Image\DLTK.jpeg" />
+    <Content Include="Image\DLTX.jpeg" />
+    <Content Include="Image\DMPA.jpeg" />
+    <Content Include="Image\DMQS.jpg" />
+    <Content Include="Image\DMQT.jpeg" />
+    <Content Include="Image\DV84G.png" />
+    <Content Include="Image\DV84XA.jpeg" />
+    <Content Include="Image\edit_square_FILL0_wght400_GRAD0_opsz24.png" />
     <Content Include="Image\home_login.png" />
+    <Content Include="Image\LBB.png" />
+    <Content Include="Image\LBBD.png" />
+    <Content Include="Image\LBBDK.png" />
+    <Content Include="Image\LBBDX.jpeg" />
+    <Content Include="Image\LBBK.png" />
+    <Content Include="Image\LBBR.png" />
+    <Content Include="Image\LBBX.png" />
     <Content Include="Image\MLBB.jpeg" />
+    <Content Include="Image\QLTH.png" />
+    <Content Include="Image\TúiđeochéoDegreyBlackCoffee.png" />
+    <Content Include="Image\TúiđeochéoDegreyCoffeeSimiliBagmàukem.jpg" />
+    <Content Include="Image\TúiđeochéovâncásấuDegreyCrocodileSimiliBag.png" />
+    <Content Include="Image\USDE.png" />
+    <Content Include="Image\USK.jpeg" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -2405,6 +2433,11 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Shared\_ManageLayout.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

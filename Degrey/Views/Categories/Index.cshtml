@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Degrey.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ManageLayout.cshtml";
+    <link href="~/Content/sanpham.css" rel="stylesheet" />
+    <link href="~/Content/mng-products.css" rel="stylesheet" />
+}
+<div class="container" style="max-width: 100%;">
+    <p class="title">
+        <span style=" font-family: sans-serif; font-weight: normal; font-size: 30px;">Category</span>
+
+
+        @Html.ActionLink("+ Thêm mới", "Create", null, new { @class = "btn btn-primary custom-btn" })
+
+    </p>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NameCate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NameCate)
+                </td>
+                <td style="display: flex; justify-content: flex-end; text-align: center;">
+                    <a href="@Url.Action("Edit", new { id = item.CatID })" class="btn btn-success btn-square btn-style">
+                        <i class="fa-solid fa-pen icon-style"></i>
+                    </a>
+
+                    <a href="@Url.Action("Details", new { id = item.CatID })" class="btn btn-success btn-square" style="margin-left: 5px;">
+                        <i class="fa-solid fa-magnifying-glass icon-style"></i>
+                    </a>
+
+                    <a href="@Url.Action("Delete", new { id = item.CatID })" class="btn btn-success btn-square" style="margin-left: 5px;">
+                        <i class="fa-solid fa-trash-can icon-style"></i>
+                    </a>
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

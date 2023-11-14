@@ -1,24 +1,51 @@
 ﻿@model IEnumerable<Degrey.Models.Product>
 
-@{
+@{  
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ManageLayout.cshtml";
     <link href="~/Content/sanpham.css" rel="stylesheet" />
+    <link href="~/Content/mng-products.css" rel="stylesheet" />
 }
 <div class="container" style="max-width: 100%;">
-    <h2>Index</h2>
 
-    <p>
-        @Html.ActionLink("Tạo thêm sản phẩm", "Create", null, new { @class = "btn btn-success" })
+
+
+
+
+
+
+    <p class="title">
+        <span style=" font-family: sans-serif; font-weight: normal; font-size: 30px;">Products <small class="count">@Model.Count()</small></span>
+
+
+        @Html.ActionLink("+ Thêm một Sản Phẩm", "Create", null, new { @class = "btn btn-primary custom-btn" })
+
     </p>
+    <div class="sortbyfilter" style="width: 275px; margin: 10px 0px">
+        <div class="dropdown" id="productDropdown">
+            <i class="fa fa-sort-alpha-asc icon-az"></i>
+            <span style="font-weight: 600;"> Sắp xếp theo Category</span>
+            <span class="triangle" style="left: 245px;"></span>
+            <div class="dropdown-content" style=" width: 275px;">
+                
+                <div class="divider"></div>
+                <a href="/Products/Index">Tất cả sản phẩm</a>
+                <a href="#" onclick="applyCategoryFilter('QuanAo')">Quần Áo</a>
+                <a href="#" onclick="applyCategoryFilter('PhuKien')">Phụ Kiện</a>
+                <!-- Add other categories as needed -->
+            </div>
+        </div>
+    </div>
+
+
     <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.ProName)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Description)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.ProImage)
             </th>
@@ -40,7 +67,7 @@
             @*<th>
                 @Html.DisplayNameFor(model => model.Gallery.ProImage)
             </th>*@
-            <th></th>
+            <th>Action</th>
         </tr>
 
         @foreach (var item in Model)
@@ -49,9 +76,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.ProName)
                 </td>
-                <td>
+                @*<td>
                     @Html.DisplayFor(modelItem => item.Description)
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.ProImage)
                 </td>
@@ -70,18 +97,43 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Category.NameCate)
                 </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.Gallery.ProImage)
-                </td>*@
-                <td style="display: flex; ">
-                    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ProID }, new { @class = "btn btn-success" }) |
-                    @Html.ActionLink("Chi tiết", "Details", new { id = item.ProID }, new { @class = "btn btn-info" }) |
-                    @Html.ActionLink("Xóa", "Delete", new { id = item.ProID }, new { @class = "btn btn-danger" })
+                <!-- Add your Gallery.ProImage display here if needed -->
+                <td style="display: flex; text-align: center;" >
+                    <a href="@Url.Action("Edit", new { id = item.ProID })" class="btn btn-success btn-square btn-style">
+                        <i class="fa-solid fa-pen icon-style"></i>
+                    </a>
+
+                    <a href="@Url.Action("Details", new { id = item.ProID })" class="btn btn-success btn-square" style="margin-left: 5px;">
+                        <i class="fa-solid fa-magnifying-glass icon-style"></i>
+                    </a>
+
+                    <a href="@Url.Action("Delete", new { id = item.ProID })" class="btn btn-success btn-square" style="margin-left: 5px;">
+                        <i class="fa-solid fa-trash-can icon-style"></i>
+                    </a>
                 </td>
-                
             </tr>
         }
 
+
     </table>
 </div>
-    
+<script>
+    function applyCategoryFilter(category) {
+        var selectedCategory = category;
+        var url = '/Products/Index';
+
+        if (selectedCategory) {
+            url += '?category=' + selectedCategory;
+        }
+
+        window.location.href = url;
+    }
+
+    function applySort(order) {
+        // Implement your sorting logic here
+        // You can update the URL or perform AJAX to get sorted data
+    }
+</script>
+
+
+
