@@ -234,6 +234,7 @@
                     <div class="grand-total">Tổng tiền: <span style="font-weight: 600; font-size: 16px; color: red;" class="total-cart"></span></div>
                 </div>
                 <div class="modal-footer" style="border-top: none;">
+                    <button type="button" class="btncartview btn btn-secondary">Xem giỏ hàng</button>
                     <button type="button" class="btnclose btn btn-secondary" data-dismiss="modal">Close</button>
                     <!-- <button type="button" class="btn btn-danger clear-all">Clear All</button> -->
                 </div>
@@ -291,6 +292,8 @@
         }
     }
 
+    
+
 
     function deleteRow(btn) {
         var row = btn.parentNode.parentNode;
@@ -339,6 +342,10 @@
         });
         $('.btniconclose').click(function () {
             $('#staticBackdrop').modal('hide');
+        });
+        $('.btncartview').click(function () {
+            window.location.href = '/Home/Cart';
+            GetDataCardFromSession(true);
         });
     });
 

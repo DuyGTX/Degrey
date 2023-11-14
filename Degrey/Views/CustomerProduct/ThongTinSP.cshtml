@@ -216,53 +216,79 @@ Với các kênh chat, email &amp; phone">
 
     $(function () {
         $('#add-to-cart').on('click', function () {
-            // Lấy thông tin sản phẩm từ ViewBag
-            var productImage = '@ViewBag.ProImage';
-            var productName = '@ViewBag.ProName'; // Lấy tên sản phẩm từ ViewBag
-            var productQuantity = $('#quantity').val();
-            var productPriceRetail = '@ViewBag.PriceSale';
+    // Lấy thông tin sản phẩm từ ViewBag
+    var productImage = '@ViewBag.ProImage';
+    var productName = '@ViewBag.ProName'; // Lấy tên sản phẩm từ ViewBag
+    var productQuantity = $('#quantity').val();
+    var productPriceRetail = '@ViewBag.PriceSale';
 
-
-            // Hiển thị thông số trong modal
-            var rowHtml = '<tr><td><img style="width:100px;height:100px;border: 1px solid #ededed;" src="/Image/' + productImage + '"/></td>' +
-                '<td>' + productName + '</td>' +
-                '<td>' + productQuantity + '</td>' +
-                '<td>' + productPriceRetail + '<span>₫</span></td>' +
-                '<td><button class="btn btn-sm btn-danger" style="text-align:center" onclick="deleteRow(this)"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr >';
-            $('.show-cart').append(rowHtml);
-            var total = 0;
-            var count = 0;
-            var tableData = [];
-            // Lặp qua từng hàng trong bảng
-            $('#cart-table tbody tr').each(function () {
-
-                var Quantity = parseInt($(this).find('td').eq(2).text());
-                var Price = parseInt($(this).find('td').eq(3).text());
-                var productTotal = Quantity * Price;
-                total += productTotal;
-                count++;
-
-                var rowData = {
-                    productImage: $(this).find('td').eq(0).text(),
-                    productName: $(this).find('td').eq(1).text(),
-                    quantity: parseInt($(this).find('td').eq(2).text()),
-                    price: parseFloat($(this).find('td').eq(3).text()),
-                };
-                tableData.push(rowData);
-            });
-
-            $('#count_detailorder').text(count);
-            // Hiển thị tổng tiền
-            $('.total-cart').text(total + ' ₫'); // Định dạng tổng tiền với hai số thập phân và thêm ₫
-
-            // Mở modal
-            $('#staticBackdrop').modal('show');
-            // Chuyển dữ liệu thành chuỗi JSON
-            var tableDataJson = JSON.stringify(tableData);
-            // Lưu chuỗi JSON vào SessionStorage
-            sessionStorage.setItem("tableData", tableDataJson);
-        });
+    // Kiểm tra xem sản phẩm đã tồn tại trong bảng hay chưa
+    var existingProductIndex = -1;
+    $('#cart-table tbody tr').each(function (index) {
+        var rowProductName = $(this).find('td').eq(1).text();
+        if (rowProductName === productName) {
+            existingProductIndex = index;
+            return false; // Dừng vòng lặp khi tìm thấy sản phẩm
+        }
     });
+
+    if (existingProductIndex !== -1) {
+        // Sản phẩm đã tồn tại, tăng giá trị quantity
+        var existingRow = $('#cart-table tbody tr').eq(existingProductIndex);
+        var existingQuantity = parseInt(existingRow.find('td').eq(2).text());
+        existingRow.find('td').eq(2).text(existingQuantity + parseInt(productQuantity, 10));
+    } else {
+        // Sản phẩm chưa tồn tại, thêm vào bảng
+        var rowHtml = '<tr><td><img style="width:100px;height:100px;border: 1px solid #ededed;" src="/Image/' + productImage + '"/></td>' +
+            '<td>' + productName + '</td>' +
+            '<td>' + productQuantity + '</td>' +
+            '<td>' + productPriceRetail + '<span>₫</span></td>' +
+            '<td><button class="btn btn-sm btn-danger" style="text-align:center" onclick="deleteRow(this)"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr >';
+        $('.show-cart').append(rowHtml);
+    }
+
+    // Cập nhật tổng tiền và số lượng
+    updateCartTotals();
+
+    // Mở modal
+    $('#staticBackdrop').modal('show');
+});
+
+// Hàm cập nhật tổng tiền và số lượng
+
+
+    });
+    function updateCartTotals() {
+        var total = 0;
+        var count = 0;
+        var tableData = [];
+
+        // Lặp qua từng hàng trong bảng
+        $('#cart-table tbody tr').each(function () {
+            var Quantity = parseInt($(this).find('td').eq(2).text());
+            var Price = parseInt($(this).find('td').eq(3).text());
+            var productTotal = Quantity * Price;
+            total += productTotal;
+            count++;
+
+            var rowData = {
+                productImage: $(this).find('td').eq(0).text(),
+                productName: $(this).find('td').eq(1).text(),
+                quantity: parseInt($(this).find('td').eq(2).text()),
+                price: parseFloat($(this).find('td').eq(3).text()),
+            };
+            tableData.push(rowData);
+        });
+
+        $('#count_detailorder').text(count);
+        // Hiển thị tổng tiền
+        $('.total-cart').text(total + ' ₫'); // Định dạng tổng tiền với hai số thập phân và thêm ₫
+
+        // Chuyển dữ liệu thành chuỗi JSON
+        var tableDataJson = JSON.stringify(tableData);
+        // Lưu chuỗi JSON vào SessionStorage
+        sessionStorage.setItem("tableData", tableDataJson);
+    }
     function togglePanel() {
         var panelDescription = document.querySelector('.panel-description');
         if (panelDescription.style.display === 'block') {

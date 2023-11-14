@@ -20,7 +20,23 @@
                 <h4>Giỏ hàng của bạn</h4>
             </div>
             <div class="cart-product">
-                <span>Giỏ hàng của bạn đang trống</span>
+                <span id="notify_detail_payment">Giỏ hàng của bạn đang trống</span>
+
+                <div class="modal-content cart-payment-table" style="width:60%">                    
+                    <div class="modal-body">
+                        <table class="show-cart-payment table" id="cart-table" style="font-size: 14px; font-weight: 600; padding-right: 35px; text-transform: uppercase; color: #000000; ">
+                            <tbody></tbody>
+                        </table>
+                        @*<div class="grand-total">Tổng tiền: <span style="font-weight: 600; font-size: 16px; color: red;" class="total-cart"></span></div>*@
+                    </div>
+                    <!--<div class="modal-footer" style="border-top: none;">
+                        <button type="button" class="btncartview btn btn-secondary">Xem giỏ hàng</button>
+                        <button type="button" class="btnclose btn btn-secondary" data-dismiss="modal">Close</button>-->
+                        <!-- <button type="button" class="btn btn-danger clear-all">Clear All</button> -->
+                    <!--</div>-->
+                </div>
+
+
             </div>
 
             <div class="col-md-4">
@@ -30,7 +46,7 @@
                 <div class="summary-total">
                     <p>
                         Tổng tiền:
-                        <span>0₫</span>
+                        <span id="sum_money"></span>
                     </p>
 
                 </div>
@@ -60,3 +76,83 @@
    
 
 </div>
+<script>
+    function GetDataCardFromSession(isGet) {
+        debugger
+        // Đọc dữ liệu từ SessionStorage
+        var tableDataJson = sessionStorage.getItem("tableData");
+        // Kiểm tra xem dữ liệu đã tồn tại
+        if (tableDataJson) {
+            var total = 0;
+            var count = 0;
+            var tableData = JSON.parse(tableDataJson);
+            if (tableData.length > 0) {
+                tableData.forEach(function (rowData) {
+                    var Quantity = parseInt(rowData.quantity);
+                    var Price = parseInt(rowData.price);
+                    var productTotal = Quantity * Price;
+                    total += productTotal;
+                    count++;
+
+                    $.ajax({
+                        url: "/Home/GetImageName",
+                        type: "POST",
+                        data: { ProductName: rowData.productName },
+                        headers: {
+                            RequestVerificationToken:
+                                $('input:hidden[name="__RequestVerificationToken"]').val()
+                        }
+                    }).done(function (data) {
+                        var rowHtml = '<tr>' +
+                            '<td><img style="width:100px;height:100px;border: 1px solid #ededed;" src="/Image/' + data + '"/></td>' +
+                            '<td>' + rowData.productName + '</td>' +
+                            '<td><input type="button" value="-" onclick="minusQuantity(this)" class="qty-btn"></td>' +
+                            '<td>' + rowData.quantity + '</td>' +
+                            '<td><input type="button" value="+" onclick="plusQuantity(this)" class="qty-btn"></td>' +
+                            '<td>' + rowData.price + '<span >₫</span></td>' +
+                            '<td>' +
+                            '<button class="btn btn-sm btn-danger" style="text-align:center" onclick="deleteRow(this)"><i class="fa fa-trash" aria-hidden="true"></i></button>' +                                                       
+                            
+                            '</td>' +
+                            '</tr>';
+                        $('.show-cart-payment').append(rowHtml);
+
+                    });
+
+                });
+                //$('#count_detailorder').text(count);
+                // Hiển thị tổng tiền
+                $('#sum_money').text(total + ' ₫'); // Định dạng tổng tiền với hai số thập phân và thêm ₫
+                // Ẩn thông báo nếu có sản phẩm
+                $('#notify_detail_payment').hide();
+            }
+            else {
+                $('#notify_detail_payment').show();
+                $('.cart-payment-table').hide();
+            }            
+
+        } else {
+            // Hiện thông báo nếu không có sản phẩm
+            
+        }
+    }
+    function minusQuantity(thisval) {        
+        var currentTds = $(thisval).closest("tr").find("td");
+        var cell = $(currentTds).eq(3).text();
+        var intData = parseInt(cell, 10);
+        if (intData > 1) {
+            intData--;
+            $(currentTds).eq(3).text(intData);
+        }
+    }
+    function plusQuantity(thisval) {
+        var currentTds = $(thisval).closest("tr").find("td");
+        var cell = $(currentTds).eq(3).text();
+        var intData = parseInt(cell, 10);        
+            intData++;
+            $(currentTds).eq(3).text(intData);        
+    }
+    $(function () {
+        GetDataCardFromSession(true);
+    });
+</script>
