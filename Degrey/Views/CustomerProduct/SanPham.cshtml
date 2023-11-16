@@ -5,6 +5,12 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
     <link href="~/Content/sanpham.css" rel="stylesheet" />
 }
+<div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <p style=" text-align: center;" class="alert alert-success">@TempData["SuccessMessage"]</p>
+    }
+</div>
 <div class="main-content-product">
     <div class="breadcrumb-all">
         <div class="container" style="height:100%">
@@ -16,15 +22,7 @@
             </div>
         </div>
     </div>
-    @*<div>
-        <label for="categoryFilter">Filter by Category:</label>
-        <select id="categoryFilter" onchange="applyCategoryFilter()">
-            <option value="">All Categories</option>
-            <option value="QuanAo">QuanAo</option>
-            <option value="PhuKien">PhuKien</option>
-             Add other categories as needed 
-        </select>
-    </div>*@
+    
 
 
     <div class="banner">
@@ -272,31 +270,7 @@
 
 
 </script>
-<script>
-    //function applyCategoryFilter() {
-    //    var selectedCategory = document.getElementById('categoryFilter').value;
 
-    //    // Hide all products
-    //    var allProducts = document.querySelectorAll('.cell');
-    //    allProducts.forEach(function (product) {
-    //        product.style.display = 'none';
-    //    });
-
-    //    // Show products based on the selected category
-    //    if (selectedCategory === '') {
-    //        // Show all products when no category is selected
-    //        allProducts.forEach(function (product) {
-    //            product.style.display = 'block';
-    //        });
-    //    } else {
-    //        // Show products matching the selected category
-    //        var categoryProducts = document.querySelectorAll('.cell[data-category="' + selectedCategory + '"]');
-    //        categoryProducts.forEach(function (product) {
-    //            product.style.display = 'block';
-    //        });
-    //    }
-    //}
-</script>
 
 
 

@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="DBDegreyStoreModel.Order" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBDegreyStoreModel.OrderDetail" Width="1.5" PointX="10.5" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBDegreyStoreModel.Supplier" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBDegreyStoreModel.User" Width="1.5" PointX="2.75" PointY="7" IsExpanded="true" />
         <AssociationConnector Association="DBDegreyStoreModel.FK__Order__CusPhone__4BAC3F29" ManuallyRouted="false" />
         <AssociationConnector Association="DBDegreyStoreModel.FK__OrderDeta__Order__4F7CD00D" ManuallyRouted="false" />
         <EntityTypeShape EntityType="DBDegreyStoreModel.ProDetail" Width="1.5" PointX="8.25" PointY="1.625" />
@@ -23,6 +22,7 @@
         <AssociationConnector Association="DBDegreyStoreModel.FK__Gallery__ProID__44FF419A" />
         <AssociationConnector Association="DBDegreyStoreModel.FK__OrderDeta__ProSu__4E88ABD4" />
         <AssociationConnector Association="DBDegreyStoreModel.FK__ProDetail__ProID__403A8C7D" />
+        <EntityTypeShape EntityType="DBDegreyStoreModel.User" Width="1.5" PointX="3.5" PointY="7" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

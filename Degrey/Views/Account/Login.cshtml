@@ -1,0 +1,89 @@
+﻿@model Degrey.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    <link href="~/Content/account.css" rel="stylesheet" />
+}
+
+<div class="account">
+    <div class="container">
+        <div class="wrapbox-content-account">
+            <div class="userbox customers_accountForm">
+                <div class="header-page clearfix">
+                    <h1>Đăng nhập</h1>
+                </div>
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success" style=" text-align: center;">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Username)
+                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                }
+
+                <div class="clearfix req_pass text-center" style="margin-top: 25px;">
+                    @Html.ActionLink("Quay lại trang chủ", "Login", "Home", new { }, new { @class = "come-back" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@*<form accept-charset='UTF-8' action='/account' id='create_customer' method='post'>
+        <input name='form_type' type='hidden' value='create_customer'>
+        <input name='utf8' type='hidden' value='✓'>
+
+
+
+        <div id="field-username" class="clearfix large_form">
+            <label for="username" class="label icon-field"><i class="icon-login icon-user"></i></label>
+            <input required type="text" value="" placeholder="Username" name="customer[username]" id="username" class="text" size="30" />
+        </div>
+        <div id="field-password" class="clearfix large_form large_form-mrb">
+            <label for="password" class="label icon-field"><i class="icon-login icon-shield"></i></label>
+            <input required type="password" value="" placeholder="Password" name="customer[password]" id="password" class="password text" size="30" />
+        </div>
+
+        <div class="clearfix large_form sitebox-recaptcha ">
+            This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>
+            and <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a> apply.
+        </div>
+        <div class="clearfix custommer_account_action" style=" margin-top: 25px;">
+            <div class="action_bottom">
+                <button href="/CustomerProduct/SanPham"class="btn button dark" type="submit">Đăng nhập</button>
+            </div>
+        </div>
+        <div class="clearfix req_pass text-center" style=" margin-top: 25px;">
+            <a style="text-decoration:none;color:black" class="come-back" href="/Home"><i class="fa fa-long-arrow-left"></i> Quay lại trang chủ</a>
+        </div>
+
+        <input id='f694e088dc5844d090d2dc3783d8d608' name='g-recaptcha-response' type='hidden'>
+    </form>*@
+<!--</div>
+</div>-->
+<!-- #register -->
+<!--</div>
+
+
+</div>-->

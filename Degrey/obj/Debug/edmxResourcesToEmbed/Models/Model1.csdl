@@ -68,14 +68,6 @@
     <Property Name="SupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
-  <EntityType Name="User">
-    <Key>
-      <PropertyRef Name="Username" />
-    </Key>
-    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-  </EntityType>
   <Association Name="FK__Order__CusPhone__4BAC3F29">
     <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
@@ -108,7 +100,6 @@
     <EntitySet Name="Orders" EntityType="Self.Order" />
     <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
     <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
-    <EntitySet Name="Users" EntityType="Self.User" />
     <AssociationSet Name="FK__Order__CusPhone__4BAC3F29" Association="Self.FK__Order__CusPhone__4BAC3F29">
       <End Role="Customer" EntitySet="Customers" />
       <End Role="Order" EntitySet="Orders" />
@@ -143,6 +134,7 @@
       <End Role="Product" EntitySet="Products" />
       <End Role="ProDetail" EntitySet="ProDetails" />
     </AssociationSet>
+    <EntitySet Name="Users" EntityType="DBDegreyStoreModel.User" />
   </EntityContainer>
   <EntityType Name="ProDetail">
     <Key>
@@ -252,4 +244,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
