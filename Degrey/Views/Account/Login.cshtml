@@ -32,13 +32,23 @@
                         @Html.LabelFor(m => m.Password)
                         @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
                     </div>
+                    <div class="form-group" style=" margin: 0px 130px;justify-content: space-evenly; display: flex; ">
+                        <button style="height: 47px; width: 123px;" type="submit" class="btncartview btn btn-dark">Đăng nhập</button>
+                        <div class="req_pass">
+                            <a href="#" onclick="showRecoverPasswordForm();return false;">Quên mật khẩu?</a><br>
+                            hoặc <a href="/Account/Register" title="Đăng ký">Đăng ký</a>
+                        </div>
+                    </div>
 
-                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+
                 }
 
+
                 <div class="clearfix req_pass text-center" style="margin-top: 25px;">
-                    @Html.ActionLink("Quay lại trang chủ", "Login", "Home", new { }, new { @class = "come-back" })
+                    <a href="/Home">Quay lại trang chủ</a>
                 </div>
+
+
             </div>
         </div>
     </div>
